@@ -1,0 +1,446 @@
+[2026-10-04 08:59:58.000] [4128] [info] [Bootstrap]  Starting order-api version=2.14.0
+[2026-10-04 09:00:01.000] [4128] [info] [HttpServer]  Server listening on 0.0.0.0:8080
+[2026-10-04 09:02:00.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (21ms) user=u-4402 request_id=1
+[2026-10-04 09:02:56.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (5ms) user=u-5520 request_id=2
+[2026-10-04 09:04:26.000] [4127] [info] [HttpServer]  PUT /api/orders -> 200 (20ms) user=u-5520 request_id=3
+[2026-10-04 09:05:28.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (26ms) user=u-4402 request_id=4
+[2026-10-04 09:05:39.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 09:06:27.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (15ms) user=u-3311 request_id=5
+[2026-10-04 09:06:34.000] [4128] [warn] [Worker]  Queue depth high depth=68 shard=1
+[2026-10-04 09:07:35.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (39ms) user=u-2087 request_id=6
+[2026-10-04 09:09:06.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (19ms) user=u-3311 request_id=7
+[2026-10-04 09:09:17.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 09:10:06.000] [4127] [info] [HttpServer]  GET /health -> 200 (27ms) user=u-3311 request_id=8
+[2026-10-04 09:11:19.000] [4127] [info] [HttpServer]  POST /api/orders -> 201 (24ms) user=u-1042 request_id=9
+[2026-10-04 09:11:30.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 09:12:32.000] [4127] [info] [HttpServer]  POST /api/catalog -> 404 (28ms) user=u-3311 request_id=10
+[2026-10-04 09:14:06.000] [4127] [info] [HttpServer]  GET /health -> 200 (4ms) user=u-1042 request_id=11
+[2026-10-04 09:15:30.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (11ms) user=u-2087 request_id=12
+[2026-10-04 09:17:02.000] [4128] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-1042 request_id=13
+[2026-10-04 09:18:33.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (10ms) user=u-1042 request_id=14
+[2026-10-04 09:19:53.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (13ms) user=u-3311 request_id=15
+[2026-10-04 09:20:04.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 09:21:14.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (54ms) user=u-1042 request_id=16
+[2026-10-04 09:22:30.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 201 (39ms) user=u-3311 request_id=17
+[2026-10-04 09:23:26.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (40ms) user=u-2087 request_id=18
+[2026-10-04 09:24:27.000] [4127] [info] [HttpServer]  GET /health -> 200 (29ms) user=u-3311 request_id=19
+[2026-10-04 09:25:30.000] [4127] [info] [HttpServer]  PUT /api/cart -> 201 (44ms) user=u-3311 request_id=20
+[2026-10-04 09:26:36.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (7ms) user=u-2087 request_id=21
+[2026-10-04 09:27:50.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (45ms) user=u-4402 request_id=22
+[2026-10-04 09:28:57.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (29ms) user=u-1042 request_id=23
+[2026-10-04 09:30:05.000] [4128] [info] [HttpServer]  GET /health -> 200 (39ms) user=u-5520 request_id=24
+[2026-10-04 09:31:35.000] [4128] [info] [HttpServer]  GET /health -> 200 (21ms) user=u-4402 request_id=25
+[2026-10-04 09:32:46.000] [4128] [info] [HttpServer]  PUT /api/payments -> 204 (44ms) user=u-3311 request_id=26
+[2026-10-04 09:33:52.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (56ms) user=u-5520 request_id=27
+[2026-10-04 09:35:11.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (41ms) user=u-2087 request_id=28
+[2026-10-04 09:36:17.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (10ms) user=u-1042 request_id=29
+[2026-10-04 09:36:24.000] [4128] [warn] [Worker]  Queue depth high depth=47 shard=2
+[2026-10-04 09:37:31.000] [4128] [info] [HttpServer]  PUT /api/cart -> 200 (56ms) user=u-4402 request_id=30
+[2026-10-04 09:38:55.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (27ms) user=u-2087 request_id=31
+[2026-10-04 09:40:23.000] [4127] [info] [HttpServer]  GET /health -> 200 (27ms) user=u-4402 request_id=32
+[2026-10-04 09:41:31.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (37ms) user=u-4402 request_id=33
+[2026-10-04 09:42:47.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (50ms) user=u-1042 request_id=34
+[2026-10-04 09:43:45.000] [4127] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-3311 request_id=35
+[2026-10-04 09:45:03.000] [4128] [info] [HttpServer]  GET /health -> 200 (28ms) user=u-2087 request_id=36
+[2026-10-04 09:46:36.000] [4128] [info] [HttpServer]  GET /health -> 200 (60ms) user=u-1042 request_id=37
+[2026-10-04 09:47:33.000] [4127] [info] [HttpServer]  GET /health -> 200 (10ms) user=u-1042 request_id=38
+[2026-10-04 09:48:58.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (30ms) user=u-3311 request_id=39
+[2026-10-04 09:50:19.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (38ms) user=u-2087 request_id=40
+[2026-10-04 09:50:26.000] [4127] [warn] [Worker]  Queue depth high depth=56 shard=3
+[2026-10-04 09:51:21.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (27ms) user=u-3311 request_id=41
+[2026-10-04 09:52:28.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (60ms) user=u-1042 request_id=42
+[2026-10-04 09:53:26.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (17ms) user=u-2087 request_id=43
+[2026-10-04 09:54:26.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (42ms) user=u-2087 request_id=44
+[2026-10-04 09:56:01.000] [4128] [info] [HttpServer]  PUT /api/orders -> 201 (44ms) user=u-4402 request_id=45
+[2026-10-04 09:57:33.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (47ms) user=u-1042 request_id=46
+[2026-10-04 09:58:42.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (52ms) user=u-1042 request_id=47
+[2026-10-04 09:59:49.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (44ms) user=u-5520 request_id=48
+[2026-10-04 10:00:53.000] [4128] [info] [HttpServer]  GET /health -> 200 (21ms) user=u-3311 request_id=49
+[2026-10-04 10:01:49.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (16ms) user=u-5520 request_id=50
+[2026-10-04 10:02:46.000] [4127] [info] [HttpServer]  GET /health -> 200 (26ms) user=u-4402 request_id=51
+[2026-10-04 10:04:08.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (56ms) user=u-5520 request_id=52
+[2026-10-04 10:05:25.000] [4127] [info] [HttpServer]  GET /health -> 200 (18ms) user=u-2087 request_id=53
+[2026-10-04 10:06:27.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (54ms) user=u-5520 request_id=54
+[2026-10-04 10:07:37.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (7ms) user=u-2087 request_id=55
+[2026-10-04 10:08:33.000] [4128] [info] [HttpServer]  GET /health -> 200 (29ms) user=u-4402 request_id=56
+[2026-10-04 10:09:40.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (19ms) user=u-4402 request_id=57
+[2026-10-04 10:10:47.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (31ms) user=u-2087 request_id=58
+[2026-10-04 10:12:18.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (30ms) user=u-4402 request_id=59
+[2026-10-04 10:13:46.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (42ms) user=u-3311 request_id=60
+[2026-10-04 10:14:56.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (44ms) user=u-2087 request_id=61
+[2026-10-04 10:16:18.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (42ms) user=u-1042 request_id=62
+[2026-10-04 10:17:51.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (43ms) user=u-5520 request_id=63
+[2026-10-04 10:19:18.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (59ms) user=u-4402 request_id=64
+[2026-10-04 10:19:25.000] [4128] [warn] [Worker]  Queue depth high depth=44 shard=1
+[2026-10-04 10:20:29.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (5ms) user=u-3311 request_id=65
+[2026-10-04 10:21:57.000] [4128] [info] [HttpServer]  POST /api/orders -> 204 (20ms) user=u-2087 request_id=66
+[2026-10-04 10:23:25.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (42ms) user=u-2087 request_id=67
+[2026-10-04 10:23:36.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 10:24:33.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (41ms) user=u-5520 request_id=68
+[2026-10-04 10:25:42.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (35ms) user=u-4402 request_id=69
+[2026-10-04 10:26:51.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (9ms) user=u-4402 request_id=70
+[2026-10-04 10:28:21.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (41ms) user=u-1042 request_id=71
+[2026-10-04 10:29:19.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (33ms) user=u-4402 request_id=72
+[2026-10-04 10:30:26.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (43ms) user=u-5520 request_id=73
+[2026-10-04 10:31:46.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (41ms) user=u-3311 request_id=74
+[2026-10-04 10:31:57.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 10:33:06.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (15ms) user=u-4402 request_id=75
+[2026-10-04 10:34:15.000] [4127] [info] [HttpServer]  GET /health -> 200 (29ms) user=u-2087 request_id=76
+[2026-10-04 10:35:19.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (15ms) user=u-4402 request_id=77
+[2026-10-04 10:36:22.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (58ms) user=u-4402 request_id=78
+[2026-10-04 10:37:54.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (20ms) user=u-2087 request_id=79
+[2026-10-04 10:39:02.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (45ms) user=u-1042 request_id=80
+[2026-10-04 10:40:37.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (45ms) user=u-2087 request_id=81
+[2026-10-04 10:41:41.000] [4127] [info] [HttpServer]  POST /api/catalog -> 404 (17ms) user=u-3311 request_id=82
+[2026-10-04 10:41:48.000] [4127] [warn] [Worker]  Queue depth high depth=40 shard=2
+[2026-10-04 10:42:53.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (31ms) user=u-1042 request_id=83
+[2026-10-04 10:44:03.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (33ms) user=u-1042 request_id=84
+[2026-10-04 10:45:34.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (33ms) user=u-1042 request_id=85
+[2026-10-04 10:46:45.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (31ms) user=u-5520 request_id=86
+[2026-10-04 10:48:02.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (20ms) user=u-4402 request_id=87
+[2026-10-04 10:49:04.000] [4128] [info] [HttpServer]  PUT /api/orders -> 204 (30ms) user=u-3311 request_id=88
+[2026-10-04 10:50:05.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (6ms) user=u-4402 request_id=89
+[2026-10-04 10:50:16.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 10:51:30.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (9ms) user=u-3311 request_id=90
+[2026-10-04 10:52:25.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (52ms) user=u-5520 request_id=91
+[2026-10-04 10:53:42.000] [4128] [info] [HttpServer]  PUT /api/payments -> 200 (18ms) user=u-2087 request_id=92
+[2026-10-04 10:55:10.000] [4127] [info] [HttpServer]  GET /health -> 200 (59ms) user=u-4402 request_id=93
+[2026-10-04 10:56:11.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (40ms) user=u-1042 request_id=94
+[2026-10-04 10:56:18.000] [4127] [warn] [Worker]  Queue depth high depth=42 shard=1
+[2026-10-04 10:57:06.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 200 (55ms) user=u-2087 request_id=95
+[2026-10-04 10:57:13.000] [4127] [warn] [Worker]  Queue depth high depth=57 shard=1
+[2026-10-04 10:58:20.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 200 (14ms) user=u-5520 request_id=96
+[2026-10-04 10:59:26.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (46ms) user=u-3311 request_id=97
+[2026-10-04 11:00:51.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (31ms) user=u-5520 request_id=98
+[2026-10-04 11:02:25.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (16ms) user=u-2087 request_id=99
+[2026-10-04 11:03:59.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (53ms) user=u-3311 request_id=100
+[2026-10-04 11:05:14.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (49ms) user=u-4402 request_id=101
+[2026-10-04 11:06:30.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (12ms) user=u-2087 request_id=102
+[2026-10-04 11:07:57.000] [4127] [info] [HttpServer]  GET /health -> 200 (16ms) user=u-2087 request_id=103
+[2026-10-04 11:08:04.000] [4128] [warn] [Worker]  Queue depth high depth=76 shard=1
+[2026-10-04 11:09:05.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (29ms) user=u-2087 request_id=104
+[2026-10-04 11:10:18.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (48ms) user=u-2087 request_id=105
+[2026-10-04 11:11:21.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (5ms) user=u-4402 request_id=106
+[2026-10-04 11:12:50.000] [4127] [info] [HttpServer]  GET /health -> 200 (49ms) user=u-4402 request_id=107
+[2026-10-04 11:13:53.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (26ms) user=u-1042 request_id=108
+[2026-10-04 11:14:49.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (21ms) user=u-3311 request_id=109
+[2026-10-04 11:15:59.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (11ms) user=u-3311 request_id=110
+[2026-10-04 11:17:03.000] [4127] [info] [HttpServer]  GET /health -> 200 (57ms) user=u-4402 request_id=111
+[2026-10-04 11:18:28.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (22ms) user=u-5520 request_id=112
+[2026-10-04 11:18:35.000] [4128] [warn] [Worker]  Queue depth high depth=40 shard=0
+[2026-10-04 11:19:42.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (30ms) user=u-2087 request_id=113
+[2026-10-04 11:21:11.000] [4127] [info] [HttpServer]  GET /health -> 200 (24ms) user=u-4402 request_id=114
+[2026-10-04 11:22:34.000] [4128] [info] [HttpServer]  GET /health -> 200 (16ms) user=u-5520 request_id=115
+[2026-10-04 11:24:01.000] [4127] [info] [HttpServer]  GET /health -> 200 (4ms) user=u-3311 request_id=116
+[2026-10-04 11:24:08.000] [4128] [warn] [Worker]  Queue depth high depth=61 shard=2
+[2026-10-04 11:25:07.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (28ms) user=u-5520 request_id=117
+[2026-10-04 11:26:27.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (59ms) user=u-2087 request_id=118
+[2026-10-04 11:26:34.000] [4128] [warn] [Worker]  Queue depth high depth=76 shard=0
+[2026-10-04 11:27:37.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (32ms) user=u-2087 request_id=119
+[2026-10-04 11:29:04.000] [4127] [info] [HttpServer]  PUT /api/payments -> 201 (17ms) user=u-5520 request_id=120
+[2026-10-04 11:30:31.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (8ms) user=u-1042 request_id=121
+[2026-10-04 11:32:02.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 200 (21ms) user=u-4402 request_id=122
+[2026-10-04 11:33:22.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (29ms) user=u-3311 request_id=123
+[2026-10-04 11:34:40.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (36ms) user=u-5520 request_id=124
+[2026-10-04 11:36:02.000] [4127] [info] [HttpServer]  PUT /api/cart -> 201 (40ms) user=u-2087 request_id=125
+[2026-10-04 11:37:36.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (11ms) user=u-1042 request_id=126
+[2026-10-04 11:38:53.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (40ms) user=u-1042 request_id=127
+[2026-10-04 11:40:00.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (17ms) user=u-2087 request_id=128
+[2026-10-04 11:41:29.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (45ms) user=u-2087 request_id=129
+[2026-10-04 11:42:38.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (14ms) user=u-4402 request_id=130
+[2026-10-04 11:43:33.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (48ms) user=u-1042 request_id=131
+[2026-10-04 11:45:07.000] [4128] [info] [HttpServer]  PUT /api/orders -> 201 (27ms) user=u-2087 request_id=132
+[2026-10-04 11:46:02.000] [4127] [info] [HttpServer]  GET /health -> 200 (10ms) user=u-4402 request_id=133
+[2026-10-04 11:47:30.000] [4127] [info] [HttpServer]  POST /api/orders -> 201 (20ms) user=u-1042 request_id=134
+[2026-10-04 11:48:56.000] [4128] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-1042 request_id=135
+[2026-10-04 11:50:14.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (5ms) user=u-1042 request_id=136
+[2026-10-04 11:51:25.000] [4127] [info] [HttpServer]  GET /health -> 200 (7ms) user=u-4402 request_id=137
+[2026-10-04 11:52:28.000] [4128] [info] [HttpServer]  GET /health -> 200 (12ms) user=u-3311 request_id=138
+[2026-10-04 11:53:32.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (27ms) user=u-4402 request_id=139
+[2026-10-04 11:54:58.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (13ms) user=u-4402 request_id=140
+[2026-10-04 11:56:00.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (42ms) user=u-5520 request_id=141
+[2026-10-04 11:56:11.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 11:57:07.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (55ms) user=u-5520 request_id=142
+[2026-10-04 11:58:10.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (22ms) user=u-1042 request_id=143
+[2026-10-04 11:59:39.000] [4127] [info] [HttpServer]  PUT /api/payments -> 204 (16ms) user=u-2087 request_id=144
+[2026-10-04 11:59:46.000] [4128] [warn] [Worker]  Queue depth high depth=66 shard=2
+[2026-10-04 12:00:57.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (45ms) user=u-3311 request_id=145
+[2026-10-04 12:01:04.000] [4128] [warn] [Worker]  Queue depth high depth=66 shard=1
+[2026-10-04 12:02:01.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (40ms) user=u-5520 request_id=146
+[2026-10-04 12:03:06.000] [4127] [info] [HttpServer]  PUT /api/orders -> 201 (46ms) user=u-2087 request_id=147
+[2026-10-04 12:04:07.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (36ms) user=u-5520 request_id=148
+[2026-10-04 12:05:26.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (58ms) user=u-3311 request_id=149
+[2026-10-04 12:06:30.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (51ms) user=u-2087 request_id=150
+[2026-10-04 12:07:27.000] [4128] [info] [HttpServer]  GET /health -> 200 (57ms) user=u-1042 request_id=151
+[2026-10-04 12:08:53.000] [4127] [info] [HttpServer]  PUT /api/cart -> 204 (11ms) user=u-5520 request_id=152
+[2026-10-04 12:09:59.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (14ms) user=u-1042 request_id=153
+[2026-10-04 12:10:56.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (22ms) user=u-4402 request_id=154
+[2026-10-04 12:12:05.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (48ms) user=u-5520 request_id=155
+[2026-10-04 12:13:11.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (33ms) user=u-3311 request_id=156
+[2026-10-04 12:14:18.000] [4127] [info] [HttpServer]  GET /health -> 200 (15ms) user=u-4402 request_id=157
+[2026-10-04 12:15:49.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (12ms) user=u-2087 request_id=158
+[2026-10-04 12:16:51.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (6ms) user=u-2087 request_id=159
+[2026-10-04 12:18:15.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (38ms) user=u-5520 request_id=160
+[2026-10-04 12:18:22.000] [4127] [warn] [Worker]  Queue depth high depth=71 shard=1
+[2026-10-04 12:19:28.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (59ms) user=u-1042 request_id=161
+[2026-10-04 12:20:50.000] [4127] [info] [HttpServer]  GET /health -> 200 (18ms) user=u-5520 request_id=162
+[2026-10-04 12:21:51.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (51ms) user=u-3311 request_id=163
+[2026-10-04 12:22:46.000] [4127] [info] [HttpServer]  GET /health -> 200 (38ms) user=u-5520 request_id=164
+[2026-10-04 12:22:53.000] [4127] [warn] [Worker]  Queue depth high depth=41 shard=0
+[2026-10-04 12:24:02.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (16ms) user=u-1042 request_id=165
+[2026-10-04 12:25:03.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (21ms) user=u-5520 request_id=166
+[2026-10-04 12:26:17.000] [4128] [info] [HttpServer]  GET /health -> 200 (14ms) user=u-2087 request_id=167
+[2026-10-04 12:27:30.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (42ms) user=u-2087 request_id=168
+[2026-10-04 12:27:37.000] [4127] [warn] [Worker]  Queue depth high depth=76 shard=1
+[2026-10-04 12:29:01.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (40ms) user=u-1042 request_id=169
+[2026-10-04 12:29:58.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 201 (35ms) user=u-5520 request_id=170
+[2026-10-04 12:30:56.000] [4127] [info] [HttpServer]  PUT /api/payments -> 201 (43ms) user=u-1042 request_id=171
+[2026-10-04 12:32:20.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (21ms) user=u-4402 request_id=172
+[2026-10-04 12:33:45.000] [4128] [info] [HttpServer]  GET /health -> 200 (54ms) user=u-2087 request_id=173
+[2026-10-04 12:33:52.000] [4127] [warn] [Worker]  Queue depth high depth=77 shard=3
+[2026-10-04 12:35:01.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (22ms) user=u-5520 request_id=174
+[2026-10-04 12:36:31.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (34ms) user=u-2087 request_id=175
+[2026-10-04 12:38:04.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (24ms) user=u-2087 request_id=176
+[2026-10-04 12:39:10.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (4ms) user=u-2087 request_id=177
+[2026-10-04 12:40:05.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (55ms) user=u-5520 request_id=178
+[2026-10-04 12:41:13.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (34ms) user=u-1042 request_id=179
+[2026-10-04 12:42:36.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (15ms) user=u-2087 request_id=180
+[2026-10-04 12:43:54.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (4ms) user=u-4402 request_id=181
+[2026-10-04 12:44:52.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (31ms) user=u-3311 request_id=182
+[2026-10-04 12:45:48.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (54ms) user=u-2087 request_id=183
+[2026-10-04 12:47:07.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (25ms) user=u-3311 request_id=184
+[2026-10-04 12:47:14.000] [4128] [warn] [Worker]  Queue depth high depth=71 shard=0
+[2026-10-04 12:48:16.000] [4128] [info] [HttpServer]  GET /health -> 200 (51ms) user=u-1042 request_id=185
+[2026-10-04 12:49:28.000] [4127] [info] [HttpServer]  GET /health -> 200 (48ms) user=u-1042 request_id=186
+[2026-10-04 12:50:36.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (41ms) user=u-1042 request_id=187
+[2026-10-04 12:51:57.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (34ms) user=u-2087 request_id=188
+[2026-10-04 12:53:16.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (7ms) user=u-5520 request_id=189
+[2026-10-04 12:54:16.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (14ms) user=u-3311 request_id=190
+[2026-10-04 12:55:29.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (55ms) user=u-3311 request_id=191
+[2026-10-04 12:56:42.000] [4127] [info] [HttpServer]  GET /health -> 404 (48ms) user=u-4402 request_id=192
+[2026-10-04 12:56:49.000] [4128] [warn] [Worker]  Queue depth high depth=59 shard=2
+[2026-10-04 12:58:04.000] [4128] [info] [HttpServer]  GET /health -> 200 (58ms) user=u-4402 request_id=193
+[2026-10-04 12:59:38.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (37ms) user=u-5520 request_id=194
+[2026-10-04 13:00:57.000] [4127] [info] [HttpServer]  GET /health -> 200 (37ms) user=u-4402 request_id=195
+[2026-10-04 13:02:19.000] [4127] [info] [HttpServer]  PUT /api/orders -> 204 (32ms) user=u-4402 request_id=196
+[2026-10-04 13:03:37.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (34ms) user=u-2087 request_id=197
+[2026-10-04 13:05:01.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (8ms) user=u-2087 request_id=198
+[2026-10-04 13:06:14.000] [4128] [info] [HttpServer]  GET /health -> 200 (8ms) user=u-4402 request_id=199
+[2026-10-04 13:07:22.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (25ms) user=u-1042 request_id=200
+[2026-10-04 13:08:51.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (23ms) user=u-5520 request_id=201
+[2026-10-04 13:09:57.000] [4128] [info] [HttpServer]  PUT /api/orders -> 201 (32ms) user=u-3311 request_id=202
+[2026-10-04 13:11:01.000] [4127] [info] [HttpServer]  GET /health -> 200 (5ms) user=u-5520 request_id=203
+[2026-10-04 13:12:04.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (41ms) user=u-3311 request_id=204
+[2026-10-04 13:13:13.000] [4128] [info] [HttpServer]  GET /health -> 200 (15ms) user=u-3311 request_id=205
+[2026-10-04 13:14:29.000] [4128] [info] [HttpServer]  GET /health -> 200 (11ms) user=u-5520 request_id=206
+[2026-10-04 13:14:36.000] [4128] [warn] [Worker]  Queue depth high depth=70 shard=2
+[2026-10-04 13:15:38.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (18ms) user=u-3311 request_id=207
+[2026-10-04 13:16:56.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (50ms) user=u-1042 request_id=208
+[2026-10-04 13:18:10.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (8ms) user=u-1042 request_id=209
+[2026-10-04 13:19:37.000] [4128] [info] [HttpServer]  GET /health -> 200 (38ms) user=u-3311 request_id=210
+[2026-10-04 13:20:51.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (59ms) user=u-1042 request_id=211
+[2026-10-04 13:20:58.000] [4128] [warn] [Worker]  Queue depth high depth=44 shard=3
+[2026-10-04 13:22:04.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (40ms) user=u-3311 request_id=212
+[2026-10-04 13:23:31.000] [4128] [info] [HttpServer]  GET /health -> 200 (18ms) user=u-3311 request_id=213
+[2026-10-04 13:24:36.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (37ms) user=u-4402 request_id=214
+[2026-10-04 13:25:55.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (49ms) user=u-1042 request_id=215
+[2026-10-04 13:27:04.000] [4128] [info] [HttpServer]  POST /api/orders -> 204 (13ms) user=u-4402 request_id=216
+[2026-10-04 13:28:25.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (53ms) user=u-3311 request_id=217
+[2026-10-04 13:29:46.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (44ms) user=u-4402 request_id=218
+[2026-10-04 13:31:00.000] [4128] [info] [HttpServer]  GET /health -> 200 (21ms) user=u-1042 request_id=219
+[2026-10-04 13:32:16.000] [4128] [info] [HttpServer]  GET /health -> 200 (16ms) user=u-3311 request_id=220
+[2026-10-04 13:33:26.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (50ms) user=u-3311 request_id=221
+[2026-10-04 13:34:30.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (42ms) user=u-1042 request_id=222
+[2026-10-04 13:35:37.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (14ms) user=u-3311 request_id=223
+[2026-10-04 13:36:50.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (33ms) user=u-1042 request_id=224
+[2026-10-04 13:37:47.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (11ms) user=u-2087 request_id=225
+[2026-10-04 13:38:55.000] [4128] [info] [HttpServer]  GET /health -> 200 (36ms) user=u-3311 request_id=226
+[2026-10-04 13:39:02.000] [4127] [warn] [Worker]  Queue depth high depth=73 shard=2
+[2026-10-04 13:40:14.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (14ms) user=u-5520 request_id=227
+[2026-10-04 13:41:43.000] [4128] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-4402 request_id=228
+[2026-10-04 13:42:57.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (38ms) user=u-3311 request_id=229
+[2026-10-04 13:44:09.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (55ms) user=u-5520 request_id=230
+[2026-10-04 13:45:18.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (22ms) user=u-4402 request_id=231
+[2026-10-04 13:46:52.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (20ms) user=u-2087 request_id=232
+[2026-10-04 13:47:59.000] [4128] [info] [HttpServer]  GET /health -> 200 (23ms) user=u-1042 request_id=233
+[2026-10-04 13:48:57.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (34ms) user=u-2087 request_id=234
+[2026-10-04 13:49:04.000] [4127] [warn] [Worker]  Queue depth high depth=42 shard=3
+[2026-10-04 13:49:59.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (5ms) user=u-5520 request_id=235
+[2026-10-04 13:51:34.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (51ms) user=u-5520 request_id=236
+[2026-10-04 13:52:58.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (35ms) user=u-4402 request_id=237
+[2026-10-04 13:54:22.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (14ms) user=u-3311 request_id=238
+[2026-10-04 13:55:34.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (51ms) user=u-2087 request_id=239
+[2026-10-04 13:56:35.000] [4127] [info] [HttpServer]  GET /health -> 200 (51ms) user=u-4402 request_id=240
+[2026-10-04 13:56:42.000] [4127] [warn] [Worker]  Queue depth high depth=42 shard=2
+[2026-10-04 13:57:41.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (28ms) user=u-1042 request_id=241
+[2026-10-04 13:59:10.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (58ms) user=u-5520 request_id=242
+[2026-10-04 14:00:08.000] [4128] [info] [HttpServer]  PUT /api/orders -> 201 (44ms) user=u-5520 request_id=243
+[2026-10-04 14:01:35.000] [4127] [info] [HttpServer]  GET /health -> 200 (8ms) user=u-5520 request_id=244
+[2026-10-04 14:02:44.000] [4128] [info] [HttpServer]  GET /health -> 200 (5ms) user=u-5520 request_id=245
+[2026-10-04 14:04:04.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (15ms) user=u-1042 request_id=246
+[2026-10-04 14:04:11.000] [4128] [warn] [Worker]  Queue depth high depth=58 shard=1
+[2026-10-04 14:05:36.000] [4128] [info] [HttpServer]  GET /health -> 200 (8ms) user=u-3311 request_id=247
+[2026-10-04 14:06:45.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (29ms) user=u-2087 request_id=248
+[2026-10-04 14:07:48.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (41ms) user=u-3311 request_id=249
+[2026-10-04 14:08:47.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (10ms) user=u-1042 request_id=250
+[2026-10-04 14:08:54.000] [4127] [warn] [Worker]  Queue depth high depth=51 shard=3
+[2026-10-04 14:09:50.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (38ms) user=u-5520 request_id=251
+[2026-10-04 14:11:19.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (57ms) user=u-5520 request_id=252
+[2026-10-04 14:11:26.000] [4128] [warn] [Worker]  Queue depth high depth=76 shard=2
+[2026-10-04 14:12:48.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (27ms) user=u-3311 request_id=253
+[2026-10-04 14:14:17.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (39ms) user=u-4402 request_id=254
+[2026-10-04 14:15:35.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (49ms) user=u-4402 request_id=255
+[2026-10-04 14:15:42.000] [4127] [warn] [Worker]  Queue depth high depth=75 shard=0
+[2026-10-04 14:17:04.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (33ms) user=u-3311 request_id=256
+[2026-10-04 14:18:39.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (23ms) user=u-2087 request_id=257
+[2026-10-04 14:19:45.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (8ms) user=u-3311 request_id=258
+[2026-10-04 14:20:44.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (19ms) user=u-1042 request_id=259
+[2026-10-04 14:22:18.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (38ms) user=u-5520 request_id=260
+[2026-10-04 14:23:37.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (44ms) user=u-2087 request_id=261
+[2026-10-04 14:24:34.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (20ms) user=u-3311 request_id=262
+[2026-10-04 14:25:59.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (15ms) user=u-5520 request_id=263
+[2026-10-04 14:27:04.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (53ms) user=u-2087 request_id=264
+[2026-10-04 14:28:32.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (12ms) user=u-1042 request_id=265
+[2026-10-04 14:29:37.000] [4128] [info] [HttpServer]  GET /health -> 200 (42ms) user=u-4402 request_id=266
+[2026-10-04 14:30:44.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (37ms) user=u-2087 request_id=267
+[2026-10-04 14:30:51.000] [4128] [warn] [Worker]  Queue depth high depth=78 shard=2
+[2026-10-04 14:31:51.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (49ms) user=u-5520 request_id=268
+[2026-10-04 14:32:59.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (18ms) user=u-3311 request_id=269
+[2026-10-04 14:34:27.000] [4127] [info] [HttpServer]  GET /health -> 200 (28ms) user=u-1042 request_id=270
+[2026-10-04 14:35:25.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (4ms) user=u-2087 request_id=271
+[2026-10-04 14:36:54.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (22ms) user=u-4402 request_id=272
+[2026-10-04 14:37:01.000] [4128] [warn] [Worker]  Queue depth high depth=54 shard=1
+[2026-10-04 14:38:01.000] [4127] [info] [HttpServer]  GET /health -> 200 (48ms) user=u-3311 request_id=273
+[2026-10-04 14:39:35.000] [4127] [info] [HttpServer]  PUT /api/orders -> 204 (18ms) user=u-1042 request_id=274
+[2026-10-04 14:40:44.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (8ms) user=u-2087 request_id=275
+[2026-10-04 14:42:13.000] [4127] [info] [HttpServer]  PUT /api/payments -> 201 (25ms) user=u-1042 request_id=276
+[2026-10-04 14:43:18.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (21ms) user=u-1042 request_id=277
+[2026-10-04 14:44:13.000] [4128] [info] [HttpServer]  GET /health -> 200 (18ms) user=u-2087 request_id=278
+[2026-10-04 14:45:24.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (32ms) user=u-5520 request_id=279
+[2026-10-04 14:46:24.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (23ms) user=u-2087 request_id=280
+[2026-10-04 14:46:31.000] [4128] [warn] [Worker]  Queue depth high depth=67 shard=1
+[2026-10-04 14:47:42.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (16ms) user=u-4402 request_id=281
+[2026-10-04 14:48:49.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 200 (22ms) user=u-2087 request_id=282
+[2026-10-04 14:48:56.000] [4128] [warn] [Worker]  Queue depth high depth=57 shard=2
+[2026-10-04 14:49:54.000] [4128] [info] [HttpServer]  GET /health -> 200 (24ms) user=u-4402 request_id=283
+[2026-10-04 14:50:51.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (18ms) user=u-3311 request_id=284
+[2026-10-04 14:51:51.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (29ms) user=u-5520 request_id=285
+[2026-10-04 14:53:00.000] [4128] [info] [HttpServer]  PUT /api/cart -> 204 (36ms) user=u-3311 request_id=286
+[2026-10-04 14:54:32.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (16ms) user=u-4402 request_id=287
+[2026-10-04 14:55:37.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (26ms) user=u-4402 request_id=288
+[2026-10-04 14:57:06.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (37ms) user=u-1042 request_id=289
+[2026-10-04 14:57:13.000] [4128] [warn] [Worker]  Queue depth high depth=51 shard=0
+[2026-10-04 14:58:09.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (56ms) user=u-2087 request_id=290
+[2026-10-04 14:59:40.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (4ms) user=u-5520 request_id=291
+[2026-10-04 15:01:06.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (5ms) user=u-3311 request_id=292
+[2026-10-04 15:02:20.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (10ms) user=u-4402 request_id=293
+[2026-10-04 15:03:33.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (20ms) user=u-2087 request_id=294
+[2026-10-04 15:04:39.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (57ms) user=u-5520 request_id=295
+[2026-10-04 15:05:58.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 200 (16ms) user=u-4402 request_id=296
+[2026-10-04 15:07:12.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 201 (12ms) user=u-3311 request_id=297
+[2026-10-04 15:08:45.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (48ms) user=u-4402 request_id=298
+[2026-10-04 15:09:40.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (17ms) user=u-4402 request_id=299
+[2026-10-04 15:11:02.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (16ms) user=u-5520 request_id=300
+[2026-10-04 15:12:05.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (42ms) user=u-1042 request_id=301
+[2026-10-04 15:13:04.000] [4127] [info] [HttpServer]  GET /health -> 200 (4ms) user=u-3311 request_id=302
+[2026-10-04 15:14:16.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (36ms) user=u-4402 request_id=303
+[2026-10-04 15:14:23.000] [4128] [warn] [Worker]  Queue depth high depth=60 shard=1
+[2026-10-04 15:15:15.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (30ms) user=u-4402 request_id=304
+[2026-10-04 15:16:29.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (42ms) user=u-5520 request_id=305
+[2026-10-04 15:17:36.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (13ms) user=u-4402 request_id=306
+[2026-10-04 15:17:43.000] [4128] [warn] [Worker]  Queue depth high depth=57 shard=3
+[2026-10-04 15:18:40.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (24ms) user=u-1042 request_id=307
+[2026-10-04 15:19:36.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (27ms) user=u-5520 request_id=308
+[2026-10-04 15:20:44.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (36ms) user=u-3311 request_id=309
+[2026-10-04 15:21:47.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (19ms) user=u-3311 request_id=310
+[2026-10-04 15:22:46.000] [4128] [info] [HttpServer]  GET /health -> 200 (5ms) user=u-5520 request_id=311
+[2026-10-04 15:23:46.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (44ms) user=u-3311 request_id=312
+[2026-10-04 15:24:41.000] [4128] [info] [HttpServer]  GET /health -> 200 (36ms) user=u-1042 request_id=313
+[2026-10-04 15:24:48.000] [4127] [warn] [Worker]  Queue depth high depth=47 shard=3
+[2026-10-04 15:25:48.000] [4127] [info] [HttpServer]  GET /health -> 200 (40ms) user=u-4402 request_id=314
+[2026-10-04 15:25:55.000] [4127] [warn] [Worker]  Queue depth high depth=49 shard=3
+[2026-10-04 15:27:00.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (54ms) user=u-1042 request_id=315
+[2026-10-04 15:28:27.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (27ms) user=u-4402 request_id=316
+[2026-10-04 15:29:52.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (53ms) user=u-3311 request_id=317
+[2026-10-04 15:30:50.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (52ms) user=u-1042 request_id=318
+[2026-10-04 15:32:14.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (60ms) user=u-4402 request_id=319
+[2026-10-04 15:32:21.000] [4127] [warn] [Worker]  Queue depth high depth=79 shard=2
+[2026-10-04 15:33:42.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (38ms) user=u-3311 request_id=320
+[2026-10-04 15:34:44.000] [4127] [info] [HttpServer]  GET /health -> 200 (5ms) user=u-2087 request_id=321
+[2026-10-04 15:35:46.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (26ms) user=u-3311 request_id=322
+[2026-10-04 15:37:03.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 200 (5ms) user=u-2087 request_id=323
+[2026-10-04 15:38:36.000] [4128] [info] [HttpServer]  PUT /api/cart -> 204 (11ms) user=u-3311 request_id=324
+[2026-10-04 15:39:32.000] [4127] [info] [HttpServer]  GET /health -> 200 (52ms) user=u-3311 request_id=325
+[2026-10-04 15:40:42.000] [4127] [info] [HttpServer]  PUT /api/cart -> 200 (21ms) user=u-1042 request_id=326
+[2026-10-04 15:41:44.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (42ms) user=u-4402 request_id=327
+[2026-10-04 15:43:14.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (48ms) user=u-5520 request_id=328
+[2026-10-04 15:44:12.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (40ms) user=u-5520 request_id=329
+[2026-10-04 15:45:43.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (54ms) user=u-2087 request_id=330
+[2026-10-04 15:45:50.000] [4127] [warn] [Worker]  Queue depth high depth=55 shard=2
+[2026-10-04 15:47:05.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (12ms) user=u-5520 request_id=331
+[2026-10-04 15:48:26.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (39ms) user=u-1042 request_id=332
+[2026-10-04 15:50:00.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (51ms) user=u-5520 request_id=333
+[2026-10-04 15:51:17.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (14ms) user=u-4402 request_id=334
+[2026-10-04 15:52:23.000] [4127] [info] [HttpServer]  GET /health -> 200 (44ms) user=u-2087 request_id=335
+[2026-10-04 15:53:21.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (50ms) user=u-4402 request_id=336
+[2026-10-04 15:54:21.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (21ms) user=u-1042 request_id=337
+[2026-10-04 15:55:26.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (55ms) user=u-5520 request_id=338
+[2026-10-04 15:56:36.000] [4127] [info] [HttpServer]  PUT /api/orders -> 200 (10ms) user=u-2087 request_id=339
+[2026-10-04 15:57:36.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (58ms) user=u-4402 request_id=340
+[2026-10-04 15:58:49.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (13ms) user=u-5520 request_id=341
+[2026-10-04 15:59:51.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (38ms) user=u-5520 request_id=342
+[2026-10-04 16:00:48.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (46ms) user=u-5520 request_id=343
+[2026-10-04 16:01:44.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 201 (29ms) user=u-4402 request_id=344
+[2026-10-04 16:02:57.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (58ms) user=u-4402 request_id=345
+[2026-10-04 16:04:27.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (10ms) user=u-1042 request_id=346
+[2026-10-04 16:06:01.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (30ms) user=u-1042 request_id=347
+[2026-10-04 16:07:31.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (15ms) user=u-4402 request_id=348
+[2026-10-04 16:07:38.000] [4127] [warn] [Worker]  Queue depth high depth=77 shard=2
+[2026-10-04 16:08:40.000] [4128] [info] [HttpServer]  POST /api/orders -> 204 (48ms) user=u-2087 request_id=349
+[2026-10-04 16:09:43.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (56ms) user=u-4402 request_id=350
+[2026-10-04 16:10:46.000] [4127] [info] [HttpServer]  GET /health -> 200 (44ms) user=u-5520 request_id=351
+[2026-10-04 16:10:53.000] [4127] [warn] [Worker]  Queue depth high depth=70 shard=2
+[2026-10-04 16:12:02.000] [4128] [info] [HttpServer]  GET /health -> 200 (13ms) user=u-4402 request_id=352
+[2026-10-04 16:13:35.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (19ms) user=u-1042 request_id=353
+[2026-10-04 16:13:42.000] [4128] [warn] [Worker]  Queue depth high depth=47 shard=3
+[2026-10-04 16:14:53.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (44ms) user=u-3311 request_id=354
+[2026-10-04 16:16:11.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (43ms) user=u-2087 request_id=355
+[2026-10-04 16:17:43.000] [4127] [info] [HttpServer]  GET /health -> 200 (36ms) user=u-4402 request_id=356
+[2026-10-04 16:19:12.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 204 (59ms) user=u-2087 request_id=357
+[2026-10-04 16:20:43.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (50ms) user=u-2087 request_id=358
+[2026-10-04 16:21:46.000] [4128] [info] [HttpServer]  GET /health -> 200 (39ms) user=u-3311 request_id=359
+[2026-10-04 16:22:52.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (51ms) user=u-1042 request_id=360
+[2026-10-04 16:22:59.000] [4127] [warn] [Worker]  Queue depth high depth=48 shard=3
+[2026-10-04 16:23:59.000] [4127] [info] [HttpServer]  POST /api/cart -> 204 (35ms) user=u-4402 request_id=361
+[2026-10-04 16:24:55.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (52ms) user=u-2087 request_id=362
+[2026-10-04 16:25:52.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (25ms) user=u-5520 request_id=363
+[2026-10-04 16:27:13.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (13ms) user=u-5520 request_id=364
+[2026-10-04 16:28:28.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (13ms) user=u-4402 request_id=365
+[2026-10-04 16:29:38.000] [4128] [info] [HttpServer]  PUT /api/orders -> 201 (26ms) user=u-3311 request_id=366
+[2026-10-04 16:31:09.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (37ms) user=u-1042 request_id=367
+[2026-10-04 16:32:42.000] [4127] [info] [HttpServer]  PUT /api/payments -> 201 (30ms) user=u-5520 request_id=368
+[2026-10-04 16:32:49.000] [4128] [warn] [Worker]  Queue depth high depth=70 shard=0
+[2026-10-04 16:33:47.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (6ms) user=u-4402 request_id=369
+[2026-10-04 16:35:09.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (12ms) user=u-4402 request_id=370
+[2026-10-04 16:36:44.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (57ms) user=u-4402 request_id=371
+[2026-10-04 16:36:51.000] [4128] [warn] [Worker]  Queue depth high depth=44 shard=2
+[2026-10-04 16:38:02.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (11ms) user=u-3311 request_id=372
+[2026-10-04 16:39:16.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (28ms) user=u-2087 request_id=373
+[2026-10-04 16:40:50.000] [4128] [info] [HttpServer]  PUT /api/payments -> 200 (29ms) user=u-2087 request_id=374
+[2026-10-04 16:41:46.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (47ms) user=u-3311 request_id=375
+[2026-10-04 16:43:06.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (11ms) user=u-4402 request_id=376
+[2026-10-04 16:44:12.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (55ms) user=u-1042 request_id=377
+[2026-10-04 16:45:41.000] [4128] [info] [HttpServer]  GET /health -> 200 (19ms) user=u-5520 request_id=378
+[2026-10-04 16:45:52.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-04 16:47:13.000] [4127] [info] [HttpServer]  GET /health -> 200 (31ms) user=u-2087 request_id=379
+[2026-10-04 16:48:38.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (58ms) user=u-2087 request_id=380
+[2026-10-04 16:49:34.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (14ms) user=u-2087 request_id=381
+[2026-10-04 16:50:55.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (48ms) user=u-2087 request_id=382
+[2026-10-04 16:52:24.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (27ms) user=u-2087 request_id=383
+[2026-10-04 16:53:54.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (41ms) user=u-5520 request_id=384
+[2026-10-04 16:55:04.000] [4127] [info] [HttpServer]  GET /api/cart -> 404 (51ms) user=u-3311 request_id=385
+[2026-10-04 16:56:05.000] [4128] [info] [HttpServer]  GET /health -> 200 (58ms) user=u-2087 request_id=386
+[2026-10-04 16:57:32.000] [4127] [info] [HttpServer]  GET /health -> 200 (12ms) user=u-5520 request_id=387
+[2026-10-04 16:58:59.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (9ms) user=u-3311 request_id=388
+[2026-10-04 16:59:06.000] [4128] [warn] [Worker]  Queue depth high depth=44 shard=2
+[2026-10-04 17:00:03.000] [4127] [info] [Bootstrap]  Shutting down order-api gracefully

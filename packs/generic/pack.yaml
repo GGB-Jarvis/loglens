@@ -1,0 +1,106 @@
+id: generic
+name: 通用应用日志
+version: "1.0"
+description: >
+  与格式无关的起始模板：自动识别方括号日志、JSON-lines、syslog、
+  nginx 和 logfmt 记录。可按自己的软件调整事件/KPI/故障词典。
+
+ingest:
+  include_globs: ["*.log", "*.log.*", "*.txt", "*.jsonl", "*.out", "*.err"]
+  exclude_dirs: [".git", ".venv", "node_modules", "__pycache__", "data", "dist", "build", "target"]
+  encodings: ["utf-8-sig", "utf-8", "gbk", "latin-1"]
+  multiline: true
+
+events:
+  - id: request
+    name: 请求
+    pattern: '(?i)\b(GET|POST|PUT|PATCH|DELETE)\s+/\S*'
+    category: traffic
+  - id: error
+    name: 错误
+    pattern: '(?i)\b(error|exception|failed|failure|fatal|panic|permission denied|unauthorized|forbidden|bad gateway|service unavailable|gateway timeout)\b'
+    category: error
+  - id: timeout
+    name: 超时
+    pattern: '(?i)\b(timeout|timed out|deadline exceeded|took too long)\b'
+    category: performance
+    level: error
+  - id: connect
+    name: 连接问题
+    pattern: '(?i)(connection refused|connection reset|no route to host|network is unreachable|broken pipe)'
+    category: connectivity
+  - id: startup
+    name: 服务启动
+    pattern: '(?i)(starting|started|listening on|server is running|initialized|bootstrap)'
+    category: lifecycle
+  - id: shutdown
+    name: 服务停止 / 重启
+    pattern: '(?i)(shutting down|shutdown|stopping|restart|reload)'
+    category: lifecycle
+  - id: deploy
+    name: 发布
+    pattern: '(?i)(deploy(ed|ing)?|release|rollout|version=)'
+    category: lifecycle
+
+kpis:
+  - id: requests
+    name: 请求数
+    type: count
+    event: request
+    description: 看起来像入站 HTTP 请求的日志行。
+  - id: errors
+    name: 错误数
+    type: count
+    event: error
+  - id: timeouts
+    name: 超时数
+    type: count
+    event: timeout
+  - id: error_rate
+    name: 错误率
+    type: ratio
+    numerator: error
+    denominator: request
+    unit: "%"
+    direction: down
+    description: 错误数除以识别到的请求行数。
+
+faults:
+  - id: connectivity
+    name: 连接故障
+    severity: high
+    patterns:
+      - '(?i)(connection refused|connection reset|no route to host|network is unreachable)'
+    hint: 检查 DNS、防火墙、TLS 以及上游服务健康状态。
+  - id: timeout
+    name: 超时 / 延迟
+    severity: high
+    patterns:
+      - '(?i)(timeout|timed out|deadline exceeded)'
+    hint: 检查依赖延迟、连接池饱和与慢查询。
+  - id: resource
+    name: 资源耗尽
+    severity: critical
+    patterns:
+      - '(?i)(out of memory|oom|no space left|too many open files|disk full)'
+    hint: 检查内存、磁盘与文件描述符上限。
+  - id: auth
+    name: 认证 / 鉴权
+    severity: high
+    patterns:
+      - '(?i)(unauthorized|forbidden|permission denied|invalid token|access denied|eacces)'
+    hint: 检查凭据、令牌过期以及文件/网络权限。
+  - id: data_integrity
+    name: 数据完整性
+    severity: high
+    patterns:
+      - '(?i)(corrupt|checksum|deserialize|malformed|invalid format)'
+    hint: 检查输入编码、Schema 变更与存储健康状态。
+
+glossary: {}
+
+prompts:
+  domain_context: >
+    这是一个通用软件日志集合。请识别运行时健康问题、
+    请求/错误趋势、依赖故障和生命周期事件。优先使用有证据支撑的
+    陈述，而不是猜测。

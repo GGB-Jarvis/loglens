@@ -1,0 +1,67 @@
+id: nginx
+name: Nginx 访问日志
+version: "1.0"
+description: 组合访问日志格式，外加常见的上游/超时错误行。
+
+ingest:
+  include_globs: ["access.log*", "error.log*", "*.log"]
+  exclude_dirs: [".git", ".venv", "node_modules"]
+  encodings: ["utf-8", "latin-1"]
+  multiline: false
+
+events:
+  - id: request
+    name: 请求
+    pattern: '(?i)\b(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)\s+/'
+    category: traffic
+  - id: server_error
+    name: 5xx 响应
+    pattern: '-> 5\d\d$'
+    category: error
+  - id: client_error
+    name: 4xx 响应
+    pattern: '-> 4\d\d$'
+    category: error
+  - id: upstream
+    name: 上游故障
+    pattern: '(?i)(upstream|connect\(\) failed|no live upstreams)'
+    category: connectivity
+
+kpis:
+  - id: requests
+    name: 请求数
+    type: count
+    event: request
+  - id: server_errors
+    name: 5xx 响应数
+    type: count
+    event: server_error
+  - id: error_rate
+    name: 5xx 比率
+    type: ratio
+    numerator: server_error
+    denominator: request
+    unit: "%"
+    direction: down
+
+faults:
+  - id: upstream
+    name: 上游
+    severity: high
+    patterns: ['(?i)(upstream timed out|connect\(\) failed|no live upstreams)']
+    hint: 检查上游连接池、健康检查与超时配置。
+  - id: client
+    name: 客户端错误
+    severity: low
+    patterns: ['(?i)(client intended to send too large body|client closed connection)']
+    hint: 检查客户端请求体大小限制与 keepalive 配置。
+  - id: disk
+    name: 磁盘 / IO
+    severity: critical
+    patterns: ['(?i)(no space left on device|write\(\) failed|disk full)']
+    hint: 检查磁盘使用率与日志轮转。
+
+prompts:
+  domain_context: >
+    Nginx 访问日志与错误日志。重点关注 5xx 比率、上游故障、
+    流量变化和客户端错误模式。

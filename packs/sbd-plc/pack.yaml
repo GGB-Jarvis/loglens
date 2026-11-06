@@ -1,0 +1,319 @@
+id: sbd-plc
+name: SBD PLC 上位控制应用
+version: 1.0.0
+description: 机场 SBD 自助托运设备硬件控制上位机（SBD PLCServer）日志领域包。覆盖应用启动与 PLC 地址/IO 映射配置、CoreSvr
+  下发的行李传送带控制命令（FstForward/FstStop）执行与回执、以及通过 Modbus TCP 与 PLC（10.10.10.10:502）通信过程中的连接、读写线圈/离散输入/保持寄存器异常。
+ingest:
+  include_globs:
+  - '*.log'
+  - applog*.log
+  exclude_dirs:
+  - data
+  - archive
+  - backup
+  - logs/old
+  encodings:
+  - utf-8-sig
+  - utf-8
+  - gbk
+  - latin-1
+  line_regex: ^\[(?P<ts>[^\]]+)\]\s+\[(?P<thread>[^\]]*)\]\s+\[(?P<level>[^\]]*)\]\s+\[(?P<module>[^\]]*)\]\s*(?P<message>.*)$
+  ts_formats:
+  - '%Y-%m-%d %H:%M:%S.%f'
+  - '%Y-%m-%d %H:%M:%S'
+  multiline: true
+  max_file_mb: 2048
+events:
+- id: app_startup
+  name: 上位机服务启动
+  pattern: (?i)SBD PLCServer version
+  category: system
+  level: info
+  module: Main
+- id: plc_offset_config
+  name: PLC 地址偏移配置
+  pattern: (?i)PLC address offset set to
+  category: system
+  level: info
+  module: PlcCommunicator
+- id: io_mapping_config
+  name: 离散输入点位映射配置
+  pattern: '(?i)Discrete input: \w+ -> 0x[0-9A-Fa-f]+'
+  category: system
+  level: info
+  module: PLCServer
+- id: core_command_received
+  name: 接收 CoreSvr 控制指令
+  pattern: (?i)recv from=CoreSvr
+  category: business
+  level: info
+  module: PLCServer
+- id: conveyor_command_dispatch
+  name: 传送带命令下发
+  pattern: (?i)conveyor cmd=\w+ addrs=\d+ val=\w+
+  category: business
+  level: info
+  module: PLCServer
+- id: conveyor_forward_command
+  name: 传送带正转命令
+  pattern: (?i)conveyor cmd=FstForward
+  category: business
+  level: info
+  module: PLCServer
+- id: conveyor_stop_command
+  name: 传送带停止命令
+  pattern: (?i)conveyor cmd=FstStop
+  category: business
+  level: info
+  module: PLCServer
+- id: conveyor_command_success
+  name: 传送带命令执行成功
+  pattern: '(?i)done: \d+/\d+ addrs OK'
+  category: business
+  level: info
+  module: PLCServer
+- id: conveyor_write_failure
+  name: 传送带命令写入失败
+  pattern: (?i)write addr=\d+ val=\w+ -> FAIL
+  category: error
+  level: warning
+  module: PLCServer
+- id: empty_address_list
+  name: 命令地址列表为空
+  pattern: (?i)empty address list for cmd=
+  category: error
+  level: error
+  module: PLCServer
+- id: modbus_connect_error
+  name: Modbus 连接失败
+  pattern: (?i)ModbusTcpClient connect failed for
+  category: communication
+  level: error
+  module: ModbusTcpClient
+- id: modbus_reconnect_error
+  name: Modbus 重连失败
+  pattern: (?i)ModbusTcpClient reconnect failed for
+  category: communication
+  level: error
+  module: ModbusTcpClient
+- id: modbus_read_input_bits_error
+  name: 读取离散输入失败
+  pattern: (?i)read_input_bits \(FC 0x02\) failed
+  category: communication
+  level: error
+  module: ModbusTcpClient
+- id: modbus_write_registers_error
+  name: 写保持寄存器失败
+  pattern: (?i)write_registers \(FC 0x10\) failed
+  category: communication
+  level: error
+  module: ModbusTcpClient
+- id: modbus_write_coils_error
+  name: 写线圈失败
+  pattern: (?i)write_coils \(FC 0x0F\) failed
+  category: communication
+  level: error
+  module: ModbusTcpClient
+- id: plc_read_failed
+  name: PLC 输入读取链路失败
+  pattern: '(?i)Failed to read input bits: Error code='
+  category: error
+  level: error
+  module: PlcCommunicator
+- id: plc_write_failed
+  name: PLC 寄存器/线圈写入链路失败
+  pattern: '(?i)Failed to write (holding registers|coils): Error code='
+  category: error
+  level: error
+  module: PlcCommunicator
+- id: zmq_bind_error
+  name: ZMQ 端口占用异常
+  pattern: '(?i)ZMQ error: Address already in use'
+  category: error
+  level: error
+  module: DeviceEndpoint
+kpis:
+- id: kpi_conveyor_command_total
+  name: 传送带命令下发次数
+  type: count
+  event: conveyor_command_dispatch
+  unit: 次
+  direction: up
+  description: 上位机向 PLC 下发传送带控制命令的总次数，反映设备实际作业强度。
+- id: kpi_conveyor_command_success
+  name: 传送带命令执行成功次数
+  type: count
+  event: conveyor_command_success
+  unit: 次
+  direction: up
+  description: '所有目标地址均写入成功（done: N/N addrs OK）的传送带命令次数。'
+- id: kpi_conveyor_command_failure
+  name: 传送带命令写入失败次数
+  type: count
+  event: conveyor_write_failure
+  unit: 次
+  direction: down
+  description: 单点地址写入返回 FAIL 的次数，直接体现 PLC 写入通道健康度。
+- id: kpi_core_request_total
+  name: CoreSvr 指令接收次数
+  type: count
+  event: core_command_received
+  unit: 次
+  direction: up
+  description: 来自 CoreSvr 的控制请求数量，用于核对上位机与调度核心的交互量。
+- id: kpi_modbus_connect_error
+  name: Modbus 连接失败次数
+  type: count
+  event: modbus_connect_error
+  unit: 次
+  direction: down
+  description: ModbusTcpClient 主动连接 PLC 失败的次数。
+- id: kpi_modbus_reconnect_error
+  name: Modbus 重连失败次数
+  type: count
+  event: modbus_reconnect_error
+  unit: 次
+  direction: down
+  description: 连接中断后重连 PLC 仍失败的次数，持续增长说明链路长时间不可用。
+- id: kpi_modbus_read_error
+  name: 离散输入读取失败次数
+  type: count
+  event: modbus_read_input_bits_error
+  unit: 次
+  direction: down
+  description: FC 0x02 读取离散输入（传感器状态）失败次数，影响设备状态感知。
+- id: kpi_modbus_write_error
+  name: 线圈写入失败次数
+  type: count
+  event: modbus_write_coils_error
+  unit: 次
+  direction: down
+  description: FC 0x0F 写线圈失败次数，直接影响传送带启停控制。
+- id: kpi_plc_comm_failure
+  name: PLC 通信层失败次数
+  type: count
+  event: plc_write_failed
+  unit: 次
+  direction: down
+  description: PlcCommunicator 上报的寄存器/线圈写入失败次数，代表通信层异常总量。
+- id: rate_conveyor_success
+  name: 传送带命令成功率
+  type: ratio
+  numerator: conveyor_command_success
+  denominator: conveyor_command_dispatch
+  unit: '%'
+  direction: up
+  description: 成功执行的传送带命令占下发命令的比例，衡量控制链路可靠性。
+- id: rate_conveyor_write_fail
+  name: 传送带命令写入失败率
+  type: ratio
+  numerator: conveyor_write_failure
+  denominator: conveyor_command_dispatch
+  unit: '%'
+  direction: down
+  description: 写入失败点数占命令下发次数的比例，升高时需排查 PLC 与网络。
+faults:
+- id: fault_zmq_port_conflict
+  name: ZMQ 端口被占用
+  severity: high
+  patterns:
+  - '(?i)ZMQ error: Address already in use'
+  hint: 设备端点端口已被其他进程占用，通常是上一次 PLCServer 进程未退出。检查残留进程与端口监听状态，必要时结束旧进程后重启服务。
+- id: fault_modbus_network_unreachable
+  name: PLC 网络不可达
+  severity: high
+  patterns:
+  - (?i)ModbusTcpClient (connect|reconnect) failed for [^,]+, errno:101
+  hint: 上位机到 PLC（10.10.10.10:502）网络不可达，检查网线、交换机、PLC 电源与 IP 配置是否正确。
+- id: fault_modbus_timeout
+  name: Modbus 通信超时
+  severity: high
+  patterns:
+  - (?i)errno:110 \(Connection timed out\)
+  hint: TCP 连接超时，多为 PLC 响应缓慢或网络丢包。检查 PLC 负载、链路质量及是否有 IP 冲突。
+- id: fault_modbus_slave_failure
+  name: PLC 从站返回故障
+  severity: high
+  patterns:
+  - (?i)errno:112345682 \(Slave device or server failure\)
+  hint: PLC 返回从站设备故障异常码，通常为 PLC 侧程序/硬件故障或访问了非法地址，需在 PLC 侧检查诊断缓冲区与地址映射。
+- id: fault_modbus_connect_failed
+  name: Modbus 建链失败
+  severity: medium
+  patterns:
+  - (?i)ModbusTcpClient connect failed for
+  hint: 首次建链失败，确认 PLC 的 Modbus TCP 服务已开启且端口 502 可访问。
+- id: fault_modbus_reconnect_failed
+  name: Modbus 重连失败
+  severity: high
+  patterns:
+  - (?i)ModbusTcpClient reconnect failed for
+  hint: 链路中断后持续重连失败，设备处于失控状态。优先恢复网络与 PLC 运行，再确认上位机重连策略。
+- id: fault_read_input_bits_failed
+  name: 离散输入读取失败
+  severity: high
+  patterns:
+  - (?i)read_input_bits \(FC 0x02\) failed
+  - (?i)Failed to read input bits
+  hint: 无法读取传感器状态（急停、超高等），设备将失去安全感知。检查 FC 0x02 起始地址 32768 与读取长度 39 是否与 PLC 组态一致。
+- id: fault_write_holding_registers_failed
+  name: 保持寄存器写入失败
+  severity: high
+  patterns:
+  - (?i)write_registers \(FC 0x10\) failed
+  - (?i)Failed to write holding registers
+  hint: FC 0x10 写保持寄存器失败，检查目标地址（如 32818）是否在 PLC 可写区且未被保护。
+- id: fault_write_coils_failed
+  name: 线圈写入失败
+  severity: high
+  patterns:
+  - (?i)write_coils \(FC 0x0F\) failed
+  - (?i)Failed to write coils
+  hint: FC 0x0F 写线圈失败会导致传送带无法启停，检查线圈地址段与 PLC 输出模块状态。
+- id: fault_conveyor_command_write_failed
+  name: 传送带命令写入失败
+  severity: high
+  patterns:
+  - (?i)write addr=\d+ val=\w+ -> FAIL
+  hint: 应用层命令写入返回 FAIL，结合同 trace 的 Modbus 错误定位是链路问题还是地址映射问题。
+- id: fault_empty_address_list
+  name: 命令地址列表为空
+  severity: medium
+  patterns:
+  - (?i)empty address list for cmd=
+  hint: 命令未匹配到任何 PLC 地址，通常是命令字（如 SBD）未在地址映射中配置，检查点位配置表与命令定义是否一致。
+glossary:
+  SBD: 自助行李托运设备（Self Bag Drop），本领域包对应的机场硬件。
+  PLCServer: 上位机主服务，负责接收 CoreSvr 指令并转换为 PLC 读写操作。
+  PlcCommunicator: PLC 通信封装模块，负责输入读取、寄存器与线圈写入及错误上报。
+  ModbusTcpClient: Modbus TCP 客户端实现，负责与 PLC 建立连接并收发功能码请求。
+  DeviceEndpoint: 基于 ZMQ 的设备端点，对外提供设备侧通信端口。
+  CoreSvr: 调度核心服务，向下位控制服务下发传送带控制命令，日志中以 CoreSvr_<id> 标识会话。
+  FC 0x02: Modbus 功能码，读取离散输入，用于获取急停、超高等传感器状态。
+  FC 0x0F: Modbus 功能码，写多个线圈，用于控制传送带启停等开关量输出。
+  FC 0x10: Modbus 功能码，写多个保持寄存器，用于下发参数或命令字。
+  Discrete input: 离散输入点位，日志中映射为 0x 开头的线圈地址，如 EStopSensor -> 0x0000。
+  'trigger: invert / no-invert': 输入信号的有效电平约定，invert 表示低电平有效（取反），no-invert 表示高电平有效。
+  EStopSensor: 急停按钮状态输入。
+  FrontSensor: 前端来包检测传感器。
+  OverheightSensor: 超重/超高检测传感器。
+  IntrusionSensor: 入侵检测传感器，触发时需停机保护。
+  MotorFaultSensor: 电机故障反馈输入。
+  BHS: 行李处理系统（Baggage Handling System），BHSStatusSensor/BHSConveyorRunningSensor 反映其状态。
+  PIRSensor: 人体红外感应传感器。
+  FstForward: 第一段传送带正转命令。
+  FstStop: 第一段传送带停止命令。
+  trace: 同一次命令处理链路的追踪号，用于串联下发、回执与失败日志。
+  addrs OK: 命令写入结果统计，形如 2/2 addrs OK，表示目标地址全部写入成功。
+  errno:101: Network is unreachable，网络不可达。
+  errno:110: Connection timed out，连接超时。
+  errno:112345682: PLC 返回的从站设备或服务器故障异常码。
+  address offset: 上位机逻辑地址到 PLC 物理地址的偏移量，样本中为 32768。
+prompts:
+  domain_context: '本领域包用于分析机场 SBD（自助行李托运）设备上位控制软件 SBD PLCServer 的运行日志。日志为方括号分段格式：[时间]
+    [线程/进程号] [级别] [模块] 消息。主要模块包括 Main（启动）、PlcCommunicator（PLC 通信封装）、PLCServer（业务命令与点位映射）、ModbusTcpClient（Modbus
+    TCP 链路）、DeviceEndpoint（ZMQ 端点）。核心业务链路为：CoreSvr 通过 ZMQ 下发命令（type=FstForward/FstStop）→
+    PLCServer 按 trace 解析目标地址并下发 conveyor cmd → 通过 Modbus FC 0x0F/0x10 写线圈/保持寄存器 →
+    返回 done: N/N addrs OK 或 write addr=x val=y -> FAIL。同时按固定周期通过 FC 0x02 读取 39 个离散输入（起步地址
+    32768），获取急停、前端来包、超高、入侵、电机故障、BHS 状态等传感器信号。典型故障为 PLC 网络不可达（errno 101）、连接超时（errno
+    110）、PLC 从站故障（errno 112345682）、ZMQ 端口占用、命令地址列表为空。分析时应关注传送带命令成功率、Modbus 读写失败频次与链路持续不可用时长。'

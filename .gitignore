@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Agent tooling / local editor state
+.opencode/
+
+# Python / local data
+.venv/
+data/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.env
+.env*.local

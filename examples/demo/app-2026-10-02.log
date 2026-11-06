@@ -1,0 +1,585 @@
+[2026-10-02 08:59:58.000] [4127] [info] [Bootstrap]  Starting order-api version=2.14.0
+[2026-10-02 09:00:01.000] [4128] [info] [HttpServer]  Server listening on 0.0.0.0:8080
+[2026-10-02 09:02:00.000] [4127] [info] [HttpServer]  GET /health -> 200 (17ms) user=u-2087 request_id=1
+[2026-10-02 09:02:07.000] [4127] [warn] [Worker]  Queue depth high depth=54 shard=0
+[2026-10-02 09:03:29.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (7ms) user=u-2087 request_id=2
+[2026-10-02 09:05:01.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (15ms) user=u-4402 request_id=3
+[2026-10-02 09:05:08.000] [4127] [warn] [Worker]  Queue depth high depth=76 shard=2
+[2026-10-02 09:06:20.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (31ms) user=u-1042 request_id=4
+[2026-10-02 09:07:31.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (20ms) user=u-5520 request_id=5
+[2026-10-02 09:08:55.000] [4127] [info] [HttpServer]  GET /health -> 200 (59ms) user=u-2087 request_id=6
+[2026-10-02 09:10:12.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (34ms) user=u-4402 request_id=7
+[2026-10-02 09:11:44.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (10ms) user=u-1042 request_id=8
+[2026-10-02 09:11:51.000] [4127] [warn] [Worker]  Queue depth high depth=52 shard=3
+[2026-10-02 09:13:09.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (25ms) user=u-2087 request_id=9
+[2026-10-02 09:14:25.000] [4128] [info] [HttpServer]  GET /health -> 200 (5ms) user=u-2087 request_id=10
+[2026-10-02 09:15:48.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (45ms) user=u-5520 request_id=11
+[2026-10-02 09:15:55.000] [4128] [warn] [Worker]  Queue depth high depth=79 shard=3
+[2026-10-02 09:17:11.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (46ms) user=u-2087 request_id=12
+[2026-10-02 09:18:33.000] [4128] [info] [HttpServer]  GET /health -> 200 (36ms) user=u-3311 request_id=13
+[2026-10-02 09:19:46.000] [4127] [info] [HttpServer]  GET /health -> 200 (20ms) user=u-5520 request_id=14
+[2026-10-02 09:21:19.000] [4127] [info] [HttpServer]  PUT /api/payments -> 201 (8ms) user=u-3311 request_id=15
+[2026-10-02 09:22:33.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (8ms) user=u-2087 request_id=16
+[2026-10-02 09:23:29.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 200 (16ms) user=u-4402 request_id=17
+[2026-10-02 09:24:26.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (17ms) user=u-5520 request_id=18
+[2026-10-02 09:25:56.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (48ms) user=u-5520 request_id=19
+[2026-10-02 09:27:02.000] [4127] [info] [HttpServer]  PUT /api/payments -> 200 (57ms) user=u-5520 request_id=20
+[2026-10-02 09:28:23.000] [4128] [info] [HttpServer]  GET /health -> 200 (14ms) user=u-3311 request_id=21
+[2026-10-02 09:29:38.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (40ms) user=u-4402 request_id=22
+[2026-10-02 09:31:00.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (56ms) user=u-5520 request_id=23
+[2026-10-02 09:31:07.000] [4128] [warn] [Worker]  Queue depth high depth=40 shard=0
+[2026-10-02 09:32:05.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (12ms) user=u-2087 request_id=24
+[2026-10-02 09:32:12.000] [4128] [warn] [Worker]  Queue depth high depth=48 shard=0
+[2026-10-02 09:33:39.000] [4128] [info] [HttpServer]  GET /health -> 200 (50ms) user=u-1042 request_id=25
+[2026-10-02 09:35:03.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (17ms) user=u-1042 request_id=26
+[2026-10-02 09:36:24.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (23ms) user=u-1042 request_id=27
+[2026-10-02 09:37:54.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (53ms) user=u-3311 request_id=28
+[2026-10-02 09:39:02.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (8ms) user=u-4402 request_id=29
+[2026-10-02 09:40:12.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (24ms) user=u-4402 request_id=30
+[2026-10-02 09:41:31.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (32ms) user=u-4402 request_id=31
+[2026-10-02 09:42:45.000] [4127] [info] [HttpServer]  PUT /api/cart -> 204 (6ms) user=u-5520 request_id=32
+[2026-10-02 09:44:05.000] [4127] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-2087 request_id=33
+[2026-10-02 09:45:04.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (34ms) user=u-1042 request_id=34
+[2026-10-02 09:46:04.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (25ms) user=u-2087 request_id=35
+[2026-10-02 09:47:32.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (59ms) user=u-4402 request_id=36
+[2026-10-02 09:48:30.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (13ms) user=u-3311 request_id=37
+[2026-10-02 09:49:47.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (21ms) user=u-2087 request_id=38
+[2026-10-02 09:51:14.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 201 (46ms) user=u-3311 request_id=39
+[2026-10-02 09:52:09.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (40ms) user=u-4402 request_id=40
+[2026-10-02 09:53:16.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (52ms) user=u-4402 request_id=41
+[2026-10-02 09:54:50.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (15ms) user=u-4402 request_id=42
+[2026-10-02 09:55:49.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (22ms) user=u-1042 request_id=43
+[2026-10-02 09:57:24.000] [4127] [info] [HttpServer]  GET /health -> 200 (13ms) user=u-2087 request_id=44
+[2026-10-02 09:58:59.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (16ms) user=u-3311 request_id=45
+[2026-10-02 09:59:57.000] [4128] [info] [HttpServer]  GET /health -> 200 (8ms) user=u-4402 request_id=46
+[2026-10-02 10:00:56.000] [4127] [info] [HttpServer]  PUT /api/payments -> 204 (54ms) user=u-4402 request_id=47
+[2026-10-02 10:01:53.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (57ms) user=u-1042 request_id=48
+[2026-10-02 10:02:50.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (54ms) user=u-5520 request_id=49
+[2026-10-02 10:04:15.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (17ms) user=u-3311 request_id=50
+[2026-10-02 10:05:21.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (40ms) user=u-5520 request_id=51
+[2026-10-02 10:06:56.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (15ms) user=u-4402 request_id=52
+[2026-10-02 10:07:07.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 10:08:26.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (16ms) user=u-2087 request_id=53
+[2026-10-02 10:09:28.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (19ms) user=u-5520 request_id=54
+[2026-10-02 10:09:35.000] [4127] [warn] [Worker]  Queue depth high depth=61 shard=3
+[2026-10-02 10:10:25.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (54ms) user=u-2087 request_id=55
+[2026-10-02 10:11:58.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (43ms) user=u-5520 request_id=56
+[2026-10-02 10:12:56.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (57ms) user=u-1042 request_id=57
+[2026-10-02 10:14:30.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (29ms) user=u-1042 request_id=58
+[2026-10-02 10:14:37.000] [4127] [warn] [Worker]  Queue depth high depth=43 shard=3
+[2026-10-02 10:15:46.000] [4128] [info] [HttpServer]  PUT /api/cart -> 204 (53ms) user=u-3311 request_id=59
+[2026-10-02 10:17:17.000] [4128] [info] [HttpServer]  GET /health -> 200 (10ms) user=u-1042 request_id=60
+[2026-10-02 10:18:46.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (37ms) user=u-5520 request_id=61
+[2026-10-02 10:19:52.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (40ms) user=u-2087 request_id=62
+[2026-10-02 10:19:59.000] [4127] [warn] [Worker]  Queue depth high depth=61 shard=3
+[2026-10-02 10:21:08.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (52ms) user=u-1042 request_id=63
+[2026-10-02 10:22:17.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 204 (32ms) user=u-4402 request_id=64
+[2026-10-02 10:23:51.000] [4127] [info] [HttpServer]  POST /api/orders -> 201 (13ms) user=u-1042 request_id=65
+[2026-10-02 10:25:12.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (37ms) user=u-4402 request_id=66
+[2026-10-02 10:26:15.000] [4127] [info] [HttpServer]  GET /health -> 200 (14ms) user=u-3311 request_id=67
+[2026-10-02 10:27:33.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (58ms) user=u-2087 request_id=68
+[2026-10-02 10:28:33.000] [4128] [info] [HttpServer]  PUT /api/payments -> 204 (45ms) user=u-5520 request_id=69
+[2026-10-02 10:30:08.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (20ms) user=u-2087 request_id=70
+[2026-10-02 10:31:13.000] [4128] [info] [HttpServer]  GET /health -> 200 (13ms) user=u-5520 request_id=71
+[2026-10-02 10:32:23.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (54ms) user=u-2087 request_id=72
+[2026-10-02 10:33:51.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (32ms) user=u-4402 request_id=73
+[2026-10-02 10:34:54.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (22ms) user=u-4402 request_id=74
+[2026-10-02 10:36:26.000] [4128] [info] [HttpServer]  GET /health -> 200 (52ms) user=u-2087 request_id=75
+[2026-10-02 10:37:44.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (17ms) user=u-2087 request_id=76
+[2026-10-02 10:38:42.000] [4127] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-5520 request_id=77
+[2026-10-02 10:40:08.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (22ms) user=u-2087 request_id=78
+[2026-10-02 10:41:43.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (5ms) user=u-1042 request_id=79
+[2026-10-02 10:41:50.000] [4128] [warn] [Worker]  Queue depth high depth=78 shard=2
+[2026-10-02 10:42:45.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (30ms) user=u-3311 request_id=80
+[2026-10-02 10:43:49.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (17ms) user=u-5520 request_id=81
+[2026-10-02 10:44:51.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (9ms) user=u-3311 request_id=82
+[2026-10-02 10:45:50.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (31ms) user=u-4402 request_id=83
+[2026-10-02 10:46:47.000] [4128] [info] [HttpServer]  GET /health -> 200 (4ms) user=u-5520 request_id=84
+[2026-10-02 10:48:08.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (27ms) user=u-2087 request_id=85
+[2026-10-02 10:49:13.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (14ms) user=u-4402 request_id=86
+[2026-10-02 10:50:35.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (17ms) user=u-4402 request_id=87
+[2026-10-02 10:52:07.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (37ms) user=u-5520 request_id=88
+[2026-10-02 10:53:11.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (27ms) user=u-3311 request_id=89
+[2026-10-02 10:54:22.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (36ms) user=u-3311 request_id=90
+[2026-10-02 10:55:40.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (59ms) user=u-5520 request_id=91
+[2026-10-02 10:57:07.000] [4127] [info] [HttpServer]  GET /health -> 200 (51ms) user=u-1042 request_id=92
+[2026-10-02 10:58:35.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (13ms) user=u-2087 request_id=93
+[2026-10-02 10:59:47.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (21ms) user=u-2087 request_id=94
+[2026-10-02 11:00:57.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (34ms) user=u-4402 request_id=95
+[2026-10-02 11:02:25.000] [4128] [info] [HttpServer]  GET /health -> 200 (44ms) user=u-1042 request_id=96
+[2026-10-02 11:03:34.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (16ms) user=u-3311 request_id=97
+[2026-10-02 11:05:08.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (4ms) user=u-2087 request_id=98
+[2026-10-02 11:06:39.000] [4127] [info] [HttpServer]  POST /api/payments -> 201 (5ms) user=u-3311 request_id=99
+[2026-10-02 11:07:50.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (34ms) user=u-5520 request_id=100
+[2026-10-02 11:08:50.000] [4128] [info] [HttpServer]  PUT /api/payments -> 204 (58ms) user=u-4402 request_id=101
+[2026-10-02 11:09:55.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (10ms) user=u-2087 request_id=102
+[2026-10-02 11:11:24.000] [4128] [info] [HttpServer]  PUT /api/cart -> 204 (41ms) user=u-2087 request_id=103
+[2026-10-02 11:12:40.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (57ms) user=u-5520 request_id=104
+[2026-10-02 11:14:04.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (34ms) user=u-4402 request_id=105
+[2026-10-02 11:15:32.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (7ms) user=u-2087 request_id=106
+[2026-10-02 11:15:39.000] [4127] [warn] [Worker]  Queue depth high depth=52 shard=1
+[2026-10-02 11:17:03.000] [4127] [info] [HttpServer]  PUT /api/orders -> 201 (24ms) user=u-5520 request_id=107
+[2026-10-02 11:18:16.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (26ms) user=u-4402 request_id=108
+[2026-10-02 11:19:37.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 201 (51ms) user=u-5520 request_id=109
+[2026-10-02 11:21:00.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (27ms) user=u-3311 request_id=110
+[2026-10-02 11:21:07.000] [4127] [warn] [Worker]  Queue depth high depth=58 shard=2
+[2026-10-02 11:22:27.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (45ms) user=u-2087 request_id=111
+[2026-10-02 11:23:39.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (20ms) user=u-5520 request_id=112
+[2026-10-02 11:24:43.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 200 (16ms) user=u-3311 request_id=113
+[2026-10-02 11:25:54.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (26ms) user=u-3311 request_id=114
+[2026-10-02 11:27:08.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (35ms) user=u-2087 request_id=115
+[2026-10-02 11:28:16.000] [4128] [info] [HttpServer]  PUT /api/orders -> 204 (36ms) user=u-4402 request_id=116
+[2026-10-02 11:29:25.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (26ms) user=u-4402 request_id=117
+[2026-10-02 11:29:32.000] [4127] [warn] [Worker]  Queue depth high depth=76 shard=1
+[2026-10-02 11:30:34.000] [4127] [info] [HttpServer]  GET /health -> 200 (44ms) user=u-4402 request_id=118
+[2026-10-02 11:30:41.000] [4127] [warn] [Worker]  Queue depth high depth=57 shard=0
+[2026-10-02 11:31:47.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (9ms) user=u-1042 request_id=119
+[2026-10-02 11:31:54.000] [4128] [warn] [Worker]  Queue depth high depth=61 shard=0
+[2026-10-02 11:33:16.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (26ms) user=u-4402 request_id=120
+[2026-10-02 11:33:23.000] [4128] [warn] [Worker]  Queue depth high depth=74 shard=2
+[2026-10-02 11:34:12.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (27ms) user=u-4402 request_id=121
+[2026-10-02 11:35:45.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (48ms) user=u-2087 request_id=122
+[2026-10-02 11:37:04.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (40ms) user=u-5520 request_id=123
+[2026-10-02 11:38:23.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (27ms) user=u-1042 request_id=124
+[2026-10-02 11:39:38.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (23ms) user=u-5520 request_id=125
+[2026-10-02 11:40:40.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (34ms) user=u-1042 request_id=126
+[2026-10-02 11:41:52.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (14ms) user=u-5520 request_id=127
+[2026-10-02 11:43:00.000] [4128] [info] [HttpServer]  POST /api/orders -> 204 (49ms) user=u-2087 request_id=128
+[2026-10-02 11:43:55.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (33ms) user=u-1042 request_id=129
+[2026-10-02 11:45:12.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 201 (11ms) user=u-5520 request_id=130
+[2026-10-02 11:45:19.000] [4127] [warn] [Worker]  Queue depth high depth=43 shard=2
+[2026-10-02 11:46:20.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (17ms) user=u-4402 request_id=131
+[2026-10-02 11:47:39.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (51ms) user=u-3311 request_id=132
+[2026-10-02 11:49:11.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (26ms) user=u-1042 request_id=133
+[2026-10-02 11:50:08.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (59ms) user=u-2087 request_id=134
+[2026-10-02 11:51:17.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (27ms) user=u-2087 request_id=135
+[2026-10-02 11:51:24.000] [4127] [warn] [Worker]  Queue depth high depth=67 shard=0
+[2026-10-02 11:52:46.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (48ms) user=u-5520 request_id=136
+[2026-10-02 11:53:44.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (40ms) user=u-3311 request_id=137
+[2026-10-02 11:54:46.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (33ms) user=u-1042 request_id=138
+[2026-10-02 11:54:57.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 11:56:16.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (10ms) user=u-1042 request_id=139
+[2026-10-02 11:57:51.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (60ms) user=u-3311 request_id=140
+[2026-10-02 11:57:58.000] [4127] [warn] [Worker]  Queue depth high depth=68 shard=3
+[2026-10-02 11:59:24.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (16ms) user=u-1042 request_id=141
+[2026-10-02 12:00:24.000] [4127] [info] [HttpServer]  GET /health -> 200 (56ms) user=u-1042 request_id=142
+[2026-10-02 12:01:56.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (8ms) user=u-1042 request_id=143
+[2026-10-02 12:03:09.000] [4127] [info] [HttpServer]  POST /api/orders -> 201 (42ms) user=u-5520 request_id=144
+[2026-10-02 12:03:16.000] [4127] [warn] [Worker]  Queue depth high depth=61 shard=0
+[2026-10-02 12:04:43.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (6ms) user=u-5520 request_id=145
+[2026-10-02 12:05:59.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (23ms) user=u-2087 request_id=146
+[2026-10-02 12:07:11.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 201 (56ms) user=u-2087 request_id=147
+[2026-10-02 12:08:37.000] [4128] [info] [HttpServer]  PUT /api/payments -> 201 (8ms) user=u-1042 request_id=148
+[2026-10-02 12:10:06.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (27ms) user=u-4402 request_id=149
+[2026-10-02 12:10:13.000] [4127] [warn] [Worker]  Queue depth high depth=73 shard=2
+[2026-10-02 12:11:12.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (49ms) user=u-5520 request_id=150
+[2026-10-02 12:12:23.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (43ms) user=u-5520 request_id=151
+[2026-10-02 12:13:39.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (39ms) user=u-2087 request_id=152
+[2026-10-02 12:14:41.000] [4127] [info] [HttpServer]  PUT /api/orders -> 200 (50ms) user=u-3311 request_id=153
+[2026-10-02 12:16:14.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (14ms) user=u-1042 request_id=154
+[2026-10-02 12:17:09.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (5ms) user=u-2087 request_id=155
+[2026-10-02 12:18:16.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (36ms) user=u-3311 request_id=156
+[2026-10-02 12:19:45.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (19ms) user=u-3311 request_id=157
+[2026-10-02 12:19:52.000] [4127] [warn] [Worker]  Queue depth high depth=51 shard=3
+[2026-10-02 12:21:16.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (42ms) user=u-4402 request_id=158
+[2026-10-02 12:22:32.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (21ms) user=u-1042 request_id=159
+[2026-10-02 12:22:39.000] [4127] [warn] [Worker]  Queue depth high depth=62 shard=1
+[2026-10-02 12:23:53.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (4ms) user=u-3311 request_id=160
+[2026-10-02 12:25:26.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (9ms) user=u-2087 request_id=161
+[2026-10-02 12:26:28.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (41ms) user=u-3311 request_id=162
+[2026-10-02 12:27:30.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (29ms) user=u-3311 request_id=163
+[2026-10-02 12:28:49.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (31ms) user=u-3311 request_id=164
+[2026-10-02 12:28:56.000] [4128] [warn] [Worker]  Queue depth high depth=60 shard=2
+[2026-10-02 12:29:49.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (46ms) user=u-1042 request_id=165
+[2026-10-02 12:31:19.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (51ms) user=u-4402 request_id=166
+[2026-10-02 12:32:20.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (24ms) user=u-5520 request_id=167
+[2026-10-02 12:32:27.000] [4127] [warn] [Worker]  Queue depth high depth=78 shard=1
+[2026-10-02 12:33:45.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (9ms) user=u-3311 request_id=168
+[2026-10-02 12:35:00.000] [4127] [info] [HttpServer]  PUT /api/cart -> 201 (49ms) user=u-4402 request_id=169
+[2026-10-02 12:36:10.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (16ms) user=u-2087 request_id=170
+[2026-10-02 12:37:11.000] [4128] [info] [HttpServer]  PUT /api/cart -> 204 (9ms) user=u-5520 request_id=171
+[2026-10-02 12:38:38.000] [4128] [info] [HttpServer]  GET /health -> 200 (50ms) user=u-3311 request_id=172
+[2026-10-02 12:40:03.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (57ms) user=u-5520 request_id=173
+[2026-10-02 12:41:20.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (47ms) user=u-3311 request_id=174
+[2026-10-02 12:42:34.000] [4127] [info] [HttpServer]  POST /api/orders -> 200 (6ms) user=u-5520 request_id=175
+[2026-10-02 12:43:53.000] [4128] [info] [HttpServer]  POST /api/cart -> 204 (8ms) user=u-5520 request_id=176
+[2026-10-02 12:44:54.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (7ms) user=u-4402 request_id=177
+[2026-10-02 12:46:16.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (4ms) user=u-3311 request_id=178
+[2026-10-02 12:47:27.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (59ms) user=u-2087 request_id=179
+[2026-10-02 12:47:34.000] [4128] [warn] [Worker]  Queue depth high depth=70 shard=1
+[2026-10-02 12:48:47.000] [4127] [info] [HttpServer]  PUT /api/cart -> 201 (50ms) user=u-3311 request_id=180
+[2026-10-02 12:50:16.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (56ms) user=u-1042 request_id=181
+[2026-10-02 12:51:19.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (59ms) user=u-1042 request_id=182
+[2026-10-02 12:52:33.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (36ms) user=u-2087 request_id=183
+[2026-10-02 12:52:40.000] [4127] [warn] [Worker]  Queue depth high depth=61 shard=3
+[2026-10-02 12:53:39.000] [4128] [info] [HttpServer]  POST /api/catalog -> 204 (48ms) user=u-3311 request_id=184
+[2026-10-02 12:54:42.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (24ms) user=u-1042 request_id=185
+[2026-10-02 12:55:56.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (35ms) user=u-3311 request_id=186
+[2026-10-02 12:55:56.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=705032 attempt=1
+[2026-10-02 12:55:56.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=356765 attempt=2
+[2026-10-02 12:57:24.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (54ms) user=u-2087 request_id=187
+[2026-10-02 12:57:24.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=947299 attempt=1
+[2026-10-02 12:57:24.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=356414 attempt=2
+[2026-10-02 12:57:24.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 12:58:20.000] [4127] [info] [HttpServer]  PUT /api/cart -> 201 (50ms) user=u-2087 request_id=188
+[2026-10-02 12:58:20.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=704674 attempt=1
+[2026-10-02 12:58:20.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=929120 attempt=2
+[2026-10-02 12:58:20.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 12:58:27.000] [4128] [warn] [Worker]  Queue depth high depth=62 shard=1
+[2026-10-02 12:58:31.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 12:59:48.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (60ms) user=u-2087 request_id=189
+[2026-10-02 12:59:48.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=262381 attempt=1
+[2026-10-02 12:59:48.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=535072 attempt=2
+[2026-10-02 13:01:17.000] [4128] [info] [HttpServer]  GET /health -> 200 (47ms) user=u-1042 request_id=190
+[2026-10-02 13:01:17.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=692478 attempt=1
+[2026-10-02 13:01:17.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=259239 attempt=2
+[2026-10-02 13:01:17.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:02:43.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (25ms) user=u-5520 request_id=191
+[2026-10-02 13:02:43.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=734267 attempt=1
+[2026-10-02 13:02:43.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=627192 attempt=2
+[2026-10-02 13:02:43.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:04:12.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (26ms) user=u-2087 request_id=192
+[2026-10-02 13:04:12.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=202867 attempt=1
+[2026-10-02 13:04:12.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=265235 attempt=2
+[2026-10-02 13:05:13.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (35ms) user=u-5520 request_id=193
+[2026-10-02 13:05:13.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=661572 attempt=1
+[2026-10-02 13:05:13.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=663488 attempt=2
+[2026-10-02 13:06:41.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (42ms) user=u-4402 request_id=194
+[2026-10-02 13:06:41.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=500499 attempt=1
+[2026-10-02 13:06:41.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=167758 attempt=2
+[2026-10-02 13:07:46.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (9ms) user=u-5520 request_id=195
+[2026-10-02 13:07:46.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=594126 attempt=1
+[2026-10-02 13:07:46.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=737682 attempt=2
+[2026-10-02 13:07:46.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:08:55.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (45ms) user=u-3311 request_id=196
+[2026-10-02 13:08:55.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=246451 attempt=1
+[2026-10-02 13:08:55.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=667286 attempt=2
+[2026-10-02 13:10:06.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (31ms) user=u-2087 request_id=197
+[2026-10-02 13:10:06.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=451464 attempt=1
+[2026-10-02 13:10:06.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=141387 attempt=2
+[2026-10-02 13:10:13.000] [4128] [warn] [Worker]  Queue depth high depth=55 shard=3
+[2026-10-02 13:11:07.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (32ms) user=u-2087 request_id=198
+[2026-10-02 13:11:07.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=118915 attempt=1
+[2026-10-02 13:11:07.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=336850 attempt=2
+[2026-10-02 13:11:07.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:12:33.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (11ms) user=u-3311 request_id=199
+[2026-10-02 13:12:33.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=842224 attempt=1
+[2026-10-02 13:12:33.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=209337 attempt=2
+[2026-10-02 13:12:33.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:13:56.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (40ms) user=u-3311 request_id=200
+[2026-10-02 13:13:56.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=318952 attempt=1
+[2026-10-02 13:13:56.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=178329 attempt=2
+[2026-10-02 13:15:09.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (42ms) user=u-5520 request_id=201
+[2026-10-02 13:15:09.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=471558 attempt=1
+[2026-10-02 13:15:09.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=385097 attempt=2
+[2026-10-02 13:16:28.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (50ms) user=u-2087 request_id=202
+[2026-10-02 13:16:28.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=970486 attempt=1
+[2026-10-02 13:16:28.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=242596 attempt=2
+[2026-10-02 13:17:53.000] [4128] [info] [HttpServer]  GET /health -> 200 (22ms) user=u-3311 request_id=203
+[2026-10-02 13:17:53.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=254995 attempt=1
+[2026-10-02 13:17:53.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=657662 attempt=2
+[2026-10-02 13:17:53.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:19:06.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (24ms) user=u-2087 request_id=204
+[2026-10-02 13:19:06.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=882582 attempt=1
+[2026-10-02 13:19:06.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=166753 attempt=2
+[2026-10-02 13:20:36.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 201 (28ms) user=u-5520 request_id=205
+[2026-10-02 13:20:36.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=681008 attempt=1
+[2026-10-02 13:20:36.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=210273 attempt=2
+[2026-10-02 13:20:36.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:22:11.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (32ms) user=u-2087 request_id=206
+[2026-10-02 13:22:11.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=543261 attempt=1
+[2026-10-02 13:22:11.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=965351 attempt=2
+[2026-10-02 13:22:11.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:22:18.000] [4127] [warn] [Worker]  Queue depth high depth=56 shard=0
+[2026-10-02 13:23:15.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (37ms) user=u-1042 request_id=207
+[2026-10-02 13:23:15.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=538212 attempt=1
+[2026-10-02 13:23:15.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=879497 attempt=2
+[2026-10-02 13:23:15.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:24:46.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (26ms) user=u-4402 request_id=208
+[2026-10-02 13:24:46.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=679847 attempt=1
+[2026-10-02 13:24:46.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=413095 attempt=2
+[2026-10-02 13:24:46.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:25:41.000] [4128] [info] [HttpServer]  POST /api/orders -> 200 (26ms) user=u-1042 request_id=209
+[2026-10-02 13:25:41.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=764985 attempt=1
+[2026-10-02 13:25:41.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=671774 attempt=2
+[2026-10-02 13:27:00.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 200 (35ms) user=u-5520 request_id=210
+[2026-10-02 13:27:00.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=860776 attempt=1
+[2026-10-02 13:27:00.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=926526 attempt=2
+[2026-10-02 13:28:31.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (13ms) user=u-4402 request_id=211
+[2026-10-02 13:28:31.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=240754 attempt=1
+[2026-10-02 13:28:31.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=249788 attempt=2
+[2026-10-02 13:29:35.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 204 (43ms) user=u-5520 request_id=212
+[2026-10-02 13:29:35.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=133545 attempt=1
+[2026-10-02 13:29:35.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=196201 attempt=2
+[2026-10-02 13:30:38.000] [4128] [info] [HttpServer]  POST /api/payments -> 201 (54ms) user=u-4402 request_id=213
+[2026-10-02 13:30:38.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=602629 attempt=1
+[2026-10-02 13:30:38.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=782790 attempt=2
+[2026-10-02 13:31:38.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 201 (41ms) user=u-2087 request_id=214
+[2026-10-02 13:31:38.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=819887 attempt=1
+[2026-10-02 13:31:38.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=216118 attempt=2
+[2026-10-02 13:32:55.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (51ms) user=u-5520 request_id=215
+[2026-10-02 13:32:55.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=467178 attempt=1
+[2026-10-02 13:32:55.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=511267 attempt=2
+[2026-10-02 13:32:55.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:34:15.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (21ms) user=u-1042 request_id=216
+[2026-10-02 13:34:15.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=373372 attempt=1
+[2026-10-02 13:34:15.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=348947 attempt=2
+[2026-10-02 13:35:37.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (22ms) user=u-2087 request_id=217
+[2026-10-02 13:35:37.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=647694 attempt=1
+[2026-10-02 13:35:37.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=906718 attempt=2
+[2026-10-02 13:35:37.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:37:09.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (5ms) user=u-1042 request_id=218
+[2026-10-02 13:37:09.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=910081 attempt=1
+[2026-10-02 13:37:09.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=903645 attempt=2
+[2026-10-02 13:38:18.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (29ms) user=u-4402 request_id=219
+[2026-10-02 13:38:18.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=909659 attempt=1
+[2026-10-02 13:38:18.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=959638 attempt=2
+[2026-10-02 13:38:18.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:39:47.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (4ms) user=u-3311 request_id=220
+[2026-10-02 13:39:47.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=538844 attempt=1
+[2026-10-02 13:39:47.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=378811 attempt=2
+[2026-10-02 13:39:47.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:41:00.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (34ms) user=u-2087 request_id=221
+[2026-10-02 13:41:00.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=204610 attempt=1
+[2026-10-02 13:41:00.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=567129 attempt=2
+[2026-10-02 13:42:30.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (17ms) user=u-1042 request_id=222
+[2026-10-02 13:42:30.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=780285 attempt=1
+[2026-10-02 13:42:30.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=512010 attempt=2
+[2026-10-02 13:42:30.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:43:39.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (35ms) user=u-2087 request_id=223
+[2026-10-02 13:43:39.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=365053 attempt=1
+[2026-10-02 13:43:39.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=655668 attempt=2
+[2026-10-02 13:43:39.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:43:46.000] [4128] [warn] [Worker]  Queue depth high depth=50 shard=2
+[2026-10-02 13:44:37.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (11ms) user=u-2087 request_id=224
+[2026-10-02 13:44:37.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=420851 attempt=1
+[2026-10-02 13:44:37.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=721551 attempt=2
+[2026-10-02 13:45:44.000] [4127] [info] [HttpServer]  GET /api/payments -> 404 (6ms) user=u-3311 request_id=225
+[2026-10-02 13:45:44.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=312917 attempt=1
+[2026-10-02 13:45:44.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=179912 attempt=2
+[2026-10-02 13:47:09.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (60ms) user=u-2087 request_id=226
+[2026-10-02 13:47:09.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=841755 attempt=1
+[2026-10-02 13:47:09.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=415692 attempt=2
+[2026-10-02 13:48:18.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (46ms) user=u-3311 request_id=227
+[2026-10-02 13:48:18.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=567069 attempt=1
+[2026-10-02 13:48:18.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=441420 attempt=2
+[2026-10-02 13:49:32.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (46ms) user=u-5520 request_id=228
+[2026-10-02 13:49:32.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=521329 attempt=1
+[2026-10-02 13:49:32.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=759912 attempt=2
+[2026-10-02 13:49:32.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:50:43.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (9ms) user=u-5520 request_id=229
+[2026-10-02 13:50:43.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=667128 attempt=1
+[2026-10-02 13:50:43.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=838931 attempt=2
+[2026-10-02 13:50:43.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:51:44.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (25ms) user=u-5520 request_id=230
+[2026-10-02 13:51:44.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=720741 attempt=1
+[2026-10-02 13:51:44.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=597672 attempt=2
+[2026-10-02 13:51:44.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:53:13.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (29ms) user=u-5520 request_id=231
+[2026-10-02 13:53:13.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=268927 attempt=1
+[2026-10-02 13:53:13.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=944853 attempt=2
+[2026-10-02 13:54:15.000] [4127] [info] [HttpServer]  GET /health -> 200 (15ms) user=u-3311 request_id=232
+[2026-10-02 13:54:15.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=525665 attempt=1
+[2026-10-02 13:54:15.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=218986 attempt=2
+[2026-10-02 13:54:15.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:55:12.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (12ms) user=u-4402 request_id=233
+[2026-10-02 13:55:12.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=299289 attempt=1
+[2026-10-02 13:55:12.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=813847 attempt=2
+[2026-10-02 13:56:21.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (19ms) user=u-4402 request_id=234
+[2026-10-02 13:56:21.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=183399 attempt=1
+[2026-10-02 13:56:21.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=228833 attempt=2
+[2026-10-02 13:56:21.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:57:50.000] [4127] [info] [HttpServer]  GET /api/catalog -> 404 (5ms) user=u-5520 request_id=235
+[2026-10-02 13:57:50.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=362978 attempt=1
+[2026-10-02 13:57:50.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=517218 attempt=2
+[2026-10-02 13:57:50.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 13:58:59.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (21ms) user=u-1042 request_id=236
+[2026-10-02 13:58:59.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=334425 attempt=1
+[2026-10-02 13:58:59.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=102384 attempt=2
+[2026-10-02 13:59:54.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (28ms) user=u-5520 request_id=237
+[2026-10-02 13:59:54.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=721339 attempt=1
+[2026-10-02 13:59:54.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=378031 attempt=2
+[2026-10-02 14:01:19.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (9ms) user=u-5520 request_id=238
+[2026-10-02 14:01:19.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=622964 attempt=1
+[2026-10-02 14:01:19.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=757084 attempt=2
+[2026-10-02 14:01:19.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 14:02:43.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 201 (37ms) user=u-2087 request_id=239
+[2026-10-02 14:02:43.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=754758 attempt=1
+[2026-10-02 14:02:43.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=483910 attempt=2
+[2026-10-02 14:03:50.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (34ms) user=u-1042 request_id=240
+[2026-10-02 14:03:50.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=894374 attempt=1
+[2026-10-02 14:03:50.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=994365 attempt=2
+[2026-10-02 14:03:50.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 14:05:25.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 404 (31ms) user=u-1042 request_id=241
+[2026-10-02 14:05:25.030] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=816442 attempt=1
+[2026-10-02 14:05:25.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=649410 attempt=2
+[2026-10-02 14:06:29.000] [4127] [info] [HttpServer]  PUT /api/payments -> 200 (20ms) user=u-1042 request_id=242
+[2026-10-02 14:06:29.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=563000 attempt=1
+[2026-10-02 14:06:29.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=889707 attempt=2
+[2026-10-02 14:06:29.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 14:06:40.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 14:07:35.000] [4128] [info] [HttpServer]  PUT /api/cart -> 200 (17ms) user=u-1042 request_id=243
+[2026-10-02 14:07:35.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=803433 attempt=1
+[2026-10-02 14:07:35.060] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=874929 attempt=2
+[2026-10-02 14:07:35.090] [4128] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 14:08:42.000] [4127] [info] [HttpServer]  PUT /api/orders -> 200 (58ms) user=u-4402 request_id=244
+[2026-10-02 14:08:42.030] [4128] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=701408 attempt=1
+[2026-10-02 14:08:42.060] [4127] [error] [InventoryClient]  Inventory reservation failed: connection timeout after 3000ms order=475364 attempt=2
+[2026-10-02 14:08:42.090] [4127] [warn] [OrderService]  Retrying inventory reservation after timeout
+[2026-10-02 14:10:02.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (54ms) user=u-4402 request_id=245
+[2026-10-02 14:11:00.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (32ms) user=u-1042 request_id=246
+[2026-10-02 14:12:24.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (23ms) user=u-3311 request_id=247
+[2026-10-02 14:13:39.000] [4128] [info] [HttpServer]  POST /api/cart -> 201 (6ms) user=u-3311 request_id=248
+[2026-10-02 14:15:10.000] [4128] [info] [HttpServer]  GET /health -> 200 (33ms) user=u-4402 request_id=249
+[2026-10-02 14:16:39.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (46ms) user=u-1042 request_id=250
+[2026-10-02 14:18:10.000] [4127] [info] [HttpServer]  GET /api/cart -> 200 (31ms) user=u-1042 request_id=251
+[2026-10-02 14:19:35.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (52ms) user=u-3311 request_id=252
+[2026-10-02 14:20:53.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (46ms) user=u-3311 request_id=253
+[2026-10-02 14:21:00.000] [4127] [warn] [Worker]  Queue depth high depth=55 shard=2
+[2026-10-02 14:21:50.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (33ms) user=u-4402 request_id=254
+[2026-10-02 14:22:01.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 14:22:54.000] [4128] [info] [HttpServer]  POST /api/orders -> 204 (31ms) user=u-1042 request_id=255
+[2026-10-02 14:24:04.000] [4127] [info] [HttpServer]  PUT /api/orders -> 201 (42ms) user=u-3311 request_id=256
+[2026-10-02 14:24:11.000] [4127] [warn] [Worker]  Queue depth high depth=40 shard=1
+[2026-10-02 14:25:10.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (38ms) user=u-5520 request_id=257
+[2026-10-02 14:26:35.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 200 (21ms) user=u-1042 request_id=258
+[2026-10-02 14:27:51.000] [4127] [info] [HttpServer]  POST /api/catalog -> 204 (17ms) user=u-2087 request_id=259
+[2026-10-02 14:28:58.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (19ms) user=u-1042 request_id=260
+[2026-10-02 14:30:07.000] [4128] [info] [HttpServer]  PUT /api/orders -> 204 (31ms) user=u-4402 request_id=261
+[2026-10-02 14:30:14.000] [4128] [warn] [Worker]  Queue depth high depth=68 shard=1
+[2026-10-02 14:31:15.000] [4128] [info] [HttpServer]  PUT /api/cart -> 201 (14ms) user=u-5520 request_id=262
+[2026-10-02 14:32:22.000] [4127] [info] [HttpServer]  POST /api/payments -> 204 (12ms) user=u-3311 request_id=263
+[2026-10-02 14:33:36.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (45ms) user=u-4402 request_id=264
+[2026-10-02 14:35:04.000] [4127] [info] [HttpServer]  POST /api/catalog -> 200 (21ms) user=u-2087 request_id=265
+[2026-10-02 14:36:06.000] [4127] [info] [HttpServer]  GET /health -> 200 (42ms) user=u-2087 request_id=266
+[2026-10-02 14:37:10.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (43ms) user=u-2087 request_id=267
+[2026-10-02 14:38:44.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (41ms) user=u-5520 request_id=268
+[2026-10-02 14:40:06.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (57ms) user=u-5520 request_id=269
+[2026-10-02 14:41:31.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (23ms) user=u-2087 request_id=270
+[2026-10-02 14:42:50.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 200 (59ms) user=u-2087 request_id=271
+[2026-10-02 14:44:06.000] [4127] [info] [HttpServer]  GET /health -> 200 (49ms) user=u-4402 request_id=272
+[2026-10-02 14:44:17.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 14:45:24.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (7ms) user=u-2087 request_id=273
+[2026-10-02 14:46:26.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (25ms) user=u-3311 request_id=274
+[2026-10-02 14:47:50.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (52ms) user=u-3311 request_id=275
+[2026-10-02 14:48:55.000] [4128] [info] [HttpServer]  PUT /api/payments -> 204 (6ms) user=u-5520 request_id=276
+[2026-10-02 14:50:28.000] [4127] [info] [HttpServer]  PUT /api/payments -> 200 (36ms) user=u-1042 request_id=277
+[2026-10-02 14:51:52.000] [4128] [info] [HttpServer]  POST /api/orders -> 201 (48ms) user=u-4402 request_id=278
+[2026-10-02 14:53:01.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (39ms) user=u-3311 request_id=279
+[2026-10-02 14:54:36.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (38ms) user=u-5520 request_id=280
+[2026-10-02 14:55:54.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (49ms) user=u-3311 request_id=281
+[2026-10-02 14:57:20.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (48ms) user=u-1042 request_id=282
+[2026-10-02 14:58:24.000] [4127] [info] [HttpServer]  GET /health -> 200 (37ms) user=u-1042 request_id=283
+[2026-10-02 14:59:59.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 201 (10ms) user=u-3311 request_id=284
+[2026-10-02 15:00:55.000] [4127] [info] [HttpServer]  POST /api/cart -> 200 (32ms) user=u-1042 request_id=285
+[2026-10-02 15:02:28.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (34ms) user=u-1042 request_id=286
+[2026-10-02 15:03:40.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (5ms) user=u-2087 request_id=287
+[2026-10-02 15:04:37.000] [4128] [info] [HttpServer]  GET /health -> 200 (27ms) user=u-1042 request_id=288
+[2026-10-02 15:05:54.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (24ms) user=u-4402 request_id=289
+[2026-10-02 15:07:16.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (4ms) user=u-2087 request_id=290
+[2026-10-02 15:08:20.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (36ms) user=u-1042 request_id=291
+[2026-10-02 15:08:27.000] [4127] [warn] [Worker]  Queue depth high depth=68 shard=3
+[2026-10-02 15:09:35.000] [4128] [info] [HttpServer]  PUT /api/payments -> 204 (53ms) user=u-5520 request_id=292
+[2026-10-02 15:10:44.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (12ms) user=u-3311 request_id=293
+[2026-10-02 15:12:06.000] [4128] [info] [HttpServer]  PUT /api/payments -> 200 (18ms) user=u-2087 request_id=294
+[2026-10-02 15:13:05.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (6ms) user=u-1042 request_id=295
+[2026-10-02 15:14:40.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (31ms) user=u-2087 request_id=296
+[2026-10-02 15:15:42.000] [4127] [info] [HttpServer]  GET /api/orders -> 404 (51ms) user=u-3311 request_id=297
+[2026-10-02 15:17:16.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (38ms) user=u-4402 request_id=298
+[2026-10-02 15:17:23.000] [4127] [warn] [Worker]  Queue depth high depth=78 shard=1
+[2026-10-02 15:18:20.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (26ms) user=u-1042 request_id=299
+[2026-10-02 15:19:19.000] [4128] [info] [HttpServer]  PUT /api/orders -> 204 (45ms) user=u-1042 request_id=300
+[2026-10-02 15:20:25.000] [4128] [info] [HttpServer]  GET /health -> 200 (8ms) user=u-3311 request_id=301
+[2026-10-02 15:21:38.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 201 (27ms) user=u-2087 request_id=302
+[2026-10-02 15:22:33.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (5ms) user=u-2087 request_id=303
+[2026-10-02 15:24:05.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (30ms) user=u-4402 request_id=304
+[2026-10-02 15:25:39.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (39ms) user=u-2087 request_id=305
+[2026-10-02 15:26:55.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (20ms) user=u-5520 request_id=306
+[2026-10-02 15:28:30.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (24ms) user=u-1042 request_id=307
+[2026-10-02 15:29:44.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (31ms) user=u-1042 request_id=308
+[2026-10-02 15:29:51.000] [4127] [warn] [Worker]  Queue depth high depth=43 shard=2
+[2026-10-02 15:31:10.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (4ms) user=u-1042 request_id=309
+[2026-10-02 15:32:30.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (38ms) user=u-5520 request_id=310
+[2026-10-02 15:33:33.000] [4127] [info] [HttpServer]  GET /api/orders/1042 -> 200 (42ms) user=u-5520 request_id=311
+[2026-10-02 15:34:55.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (52ms) user=u-1042 request_id=312
+[2026-10-02 15:36:30.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (60ms) user=u-3311 request_id=313
+[2026-10-02 15:36:37.000] [4128] [warn] [Worker]  Queue depth high depth=46 shard=2
+[2026-10-02 15:37:32.000] [4127] [info] [HttpServer]  POST /api/orders -> 204 (17ms) user=u-2087 request_id=314
+[2026-10-02 15:38:54.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (5ms) user=u-3311 request_id=315
+[2026-10-02 15:40:05.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (19ms) user=u-3311 request_id=316
+[2026-10-02 15:40:12.000] [4127] [warn] [Worker]  Queue depth high depth=71 shard=3
+[2026-10-02 15:41:33.000] [4127] [info] [HttpServer]  POST /api/orders/1042 -> 204 (39ms) user=u-4402 request_id=317
+[2026-10-02 15:43:06.000] [4128] [info] [HttpServer]  GET /health -> 200 (47ms) user=u-4402 request_id=318
+[2026-10-02 15:44:27.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 200 (29ms) user=u-3311 request_id=319
+[2026-10-02 15:45:26.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (27ms) user=u-2087 request_id=320
+[2026-10-02 15:47:00.000] [4128] [info] [HttpServer]  POST /api/cart -> 200 (48ms) user=u-4402 request_id=321
+[2026-10-02 15:47:55.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (51ms) user=u-1042 request_id=322
+[2026-10-02 15:48:02.000] [4127] [warn] [Worker]  Queue depth high depth=47 shard=1
+[2026-10-02 15:49:25.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (35ms) user=u-2087 request_id=323
+[2026-10-02 15:49:32.000] [4127] [warn] [Worker]  Queue depth high depth=62 shard=1
+[2026-10-02 15:50:44.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (21ms) user=u-1042 request_id=324
+[2026-10-02 15:51:40.000] [4127] [info] [HttpServer]  POST /api/cart -> 201 (9ms) user=u-2087 request_id=325
+[2026-10-02 15:53:14.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 201 (47ms) user=u-1042 request_id=326
+[2026-10-02 15:54:36.000] [4127] [info] [HttpServer]  PUT /api/orders -> 200 (54ms) user=u-1042 request_id=327
+[2026-10-02 15:55:44.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (39ms) user=u-2087 request_id=328
+[2026-10-02 15:56:57.000] [4128] [info] [HttpServer]  PUT /api/orders -> 204 (43ms) user=u-5520 request_id=329
+[2026-10-02 15:58:12.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 204 (45ms) user=u-5520 request_id=330
+[2026-10-02 15:59:42.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (33ms) user=u-3311 request_id=331
+[2026-10-02 15:59:49.000] [4127] [warn] [Worker]  Queue depth high depth=51 shard=1
+[2026-10-02 16:00:45.000] [4127] [info] [HttpServer]  GET /health -> 200 (58ms) user=u-2087 request_id=332
+[2026-10-02 16:01:58.000] [4127] [info] [HttpServer]  GET /health -> 200 (7ms) user=u-5520 request_id=333
+[2026-10-02 16:03:26.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (12ms) user=u-1042 request_id=334
+[2026-10-02 16:04:58.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (18ms) user=u-3311 request_id=335
+[2026-10-02 16:06:08.000] [4128] [info] [HttpServer]  POST /api/payments -> 204 (40ms) user=u-2087 request_id=336
+[2026-10-02 16:07:43.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (53ms) user=u-4402 request_id=337
+[2026-10-02 16:09:12.000] [4127] [info] [HttpServer]  GET /health -> 200 (21ms) user=u-5520 request_id=338
+[2026-10-02 16:10:24.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (6ms) user=u-5520 request_id=339
+[2026-10-02 16:11:24.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (19ms) user=u-1042 request_id=340
+[2026-10-02 16:12:34.000] [4127] [info] [HttpServer]  GET /health -> 200 (39ms) user=u-1042 request_id=341
+[2026-10-02 16:13:50.000] [4127] [info] [HttpServer]  POST /api/payments -> 200 (60ms) user=u-1042 request_id=342
+[2026-10-02 16:15:06.000] [4127] [info] [HttpServer]  GET /health -> 200 (12ms) user=u-5520 request_id=343
+[2026-10-02 16:16:21.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (51ms) user=u-1042 request_id=344
+[2026-10-02 16:17:23.000] [4128] [info] [HttpServer]  PUT /api/catalog -> 204 (50ms) user=u-3311 request_id=345
+[2026-10-02 16:18:35.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (36ms) user=u-1042 request_id=346
+[2026-10-02 16:19:50.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (45ms) user=u-1042 request_id=347
+[2026-10-02 16:19:57.000] [4128] [warn] [Worker]  Queue depth high depth=74 shard=2
+[2026-10-02 16:21:22.000] [4128] [info] [HttpServer]  POST /api/catalog -> 201 (26ms) user=u-2087 request_id=348
+[2026-10-02 16:21:33.000] [4128] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 16:22:44.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (38ms) user=u-1042 request_id=349
+[2026-10-02 16:22:55.000] [4127] [error] [PaymentClient]  Upstream returned 502 Bad Gateway provider=pay-a
+[2026-10-02 16:24:01.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (50ms) user=u-3311 request_id=350
+[2026-10-02 16:24:56.000] [4128] [info] [HttpServer]  GET /health -> 200 (25ms) user=u-5520 request_id=351
+[2026-10-02 16:26:14.000] [4127] [info] [HttpServer]  GET /health -> 200 (29ms) user=u-2087 request_id=352
+[2026-10-02 16:27:39.000] [4128] [info] [HttpServer]  GET /api/orders -> 200 (41ms) user=u-5520 request_id=353
+[2026-10-02 16:29:11.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (7ms) user=u-1042 request_id=354
+[2026-10-02 16:30:13.000] [4127] [info] [HttpServer]  PUT /api/orders/1042 -> 201 (11ms) user=u-5520 request_id=355
+[2026-10-02 16:31:19.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (20ms) user=u-1042 request_id=356
+[2026-10-02 16:32:17.000] [4127] [info] [HttpServer]  GET /health -> 200 (60ms) user=u-5520 request_id=357
+[2026-10-02 16:33:29.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (60ms) user=u-1042 request_id=358
+[2026-10-02 16:34:56.000] [4127] [info] [HttpServer]  POST /api/catalog -> 201 (12ms) user=u-5520 request_id=359
+[2026-10-02 16:36:04.000] [4128] [info] [HttpServer]  PUT /api/orders -> 200 (56ms) user=u-2087 request_id=360
+[2026-10-02 16:37:17.000] [4128] [info] [HttpServer]  GET /api/cart -> 200 (50ms) user=u-3311 request_id=361
+[2026-10-02 16:38:43.000] [4128] [info] [HttpServer]  PUT /api/payments -> 200 (13ms) user=u-3311 request_id=362
+[2026-10-02 16:40:01.000] [4128] [info] [HttpServer]  GET /health -> 200 (38ms) user=u-2087 request_id=363
+[2026-10-02 16:40:08.000] [4128] [warn] [Worker]  Queue depth high depth=51 shard=3
+[2026-10-02 16:41:08.000] [4128] [info] [HttpServer]  POST /api/orders/1042 -> 204 (60ms) user=u-4402 request_id=364
+[2026-10-02 16:42:20.000] [4128] [info] [HttpServer]  GET /api/catalog -> 200 (25ms) user=u-5520 request_id=365
+[2026-10-02 16:43:16.000] [4128] [info] [HttpServer]  GET /api/payments -> 200 (36ms) user=u-4402 request_id=366
+[2026-10-02 16:44:44.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (23ms) user=u-2087 request_id=367
+[2026-10-02 16:44:51.000] [4127] [warn] [Worker]  Queue depth high depth=76 shard=1
+[2026-10-02 16:46:04.000] [4128] [info] [HttpServer]  PUT /api/payments -> 200 (26ms) user=u-4402 request_id=368
+[2026-10-02 16:47:02.000] [4128] [info] [HttpServer]  GET /api/orders/1042 -> 200 (20ms) user=u-2087 request_id=369
+[2026-10-02 16:47:09.000] [4127] [warn] [Worker]  Queue depth high depth=54 shard=3
+[2026-10-02 16:48:02.000] [4128] [info] [HttpServer]  PUT /api/cart -> 200 (50ms) user=u-5520 request_id=370
+[2026-10-02 16:49:19.000] [4128] [info] [HttpServer]  PUT /api/orders/1042 -> 204 (15ms) user=u-5520 request_id=371
+[2026-10-02 16:50:23.000] [4127] [info] [HttpServer]  PUT /api/catalog -> 204 (25ms) user=u-1042 request_id=372
+[2026-10-02 16:51:29.000] [4127] [info] [HttpServer]  GET /api/catalog -> 200 (45ms) user=u-4402 request_id=373
+[2026-10-02 16:52:56.000] [4127] [info] [HttpServer]  POST /api/catalog -> 404 (49ms) user=u-1042 request_id=374
+[2026-10-02 16:54:01.000] [4127] [info] [HttpServer]  GET /api/orders -> 200 (10ms) user=u-3311 request_id=375
+[2026-10-02 16:55:00.000] [4128] [info] [HttpServer]  POST /api/payments -> 200 (6ms) user=u-2087 request_id=376
+[2026-10-02 16:56:09.000] [4128] [info] [HttpServer]  POST /api/catalog -> 200 (37ms) user=u-1042 request_id=377
+[2026-10-02 16:56:16.000] [4128] [warn] [Worker]  Queue depth high depth=53 shard=1
+[2026-10-02 16:57:21.000] [4127] [info] [HttpServer]  PUT /api/payments -> 200 (57ms) user=u-5520 request_id=378
+[2026-10-02 16:57:28.000] [4128] [warn] [Worker]  Queue depth high depth=40 shard=3
+[2026-10-02 16:58:49.000] [4127] [info] [HttpServer]  GET /api/payments -> 200 (32ms) user=u-1042 request_id=379
+[2026-10-02 17:00:03.000] [4128] [info] [Bootstrap]  Shutting down order-api gracefully
